@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <!--Switches-->
+  <CopyAttributes Enabled="true" />
+  <UnionDuplicates Enabled="false" />
+  <Debug Enabled="1" />
+  <Internalize Enabled="false" />
+  <MergeXml Enabled="true" />
+  <!--Signing-->
+  <Sign Enabled="true" Delay="false">C:\Sandbox\Codeplex\Cudafy\Cudafy.NET\Cudafy.NET.snk</Sign>
+  <!--Logging-->
+  <Log Enabled="true">C:\Sandbox\Codeplex\Cudafy\Cudafy.NET\ilmerge.log</Log>
+  <!--Assemblies-->
+  <Assemblies>
+    <Assembly>C:\Sandbox\Codeplex\Cudafy\Cudafy.NET\bin\Release\Cloo.dll</Assembly>
+    <Assembly>C:\Sandbox\Codeplex\Cudafy\Cudafy.NET\bin\Release\CUDA.NET.dll</Assembly>
+    <Assembly>C:\Sandbox\Codeplex\Cudafy\Cudafy.NET\bin\Release\Cudafy.dll</Assembly>
+    <Assembly>C:\Sandbox\Codeplex\Cudafy\Cudafy.NET\bin\Release\Cudafy.Host.dll</Assembly>
+    <Assembly>C:\Sandbox\Codeplex\Cudafy\Cudafy.NET\bin\Release\Cudafy.Math.dll</Assembly>
+    <Assembly>C:\Sandbox\Codeplex\Cudafy\Cudafy.NET\bin\Release\Cudafy.NET.dll</Assembly>
+    <Assembly>C:\Sandbox\Codeplex\Cudafy\Cudafy.NET\bin\Release\Cudafy.Translator.dll</Assembly>
+    <Primary>C:\Sandbox\Codeplex\Cudafy\Cudafy.NET\bin\Release\Cudafy.NET.dll</Primary>
+  </Assemblies>
+  <!--Output-->
+  <OutputAssembly>C:\Sandbox\Codeplex\Cudafy\output\Cudafy.NET.dll</OutputAssembly>
+  <!--.NET Framework-->
+  <Framework>.NET Framework 4.5 Full</Framework>
+  <!--Merge Engine-->
+  <Engine Name="ILMerge" />
+</Settings>

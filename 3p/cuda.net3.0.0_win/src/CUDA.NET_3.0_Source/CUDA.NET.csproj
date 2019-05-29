@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1ABEC3F4-5CE8-469E-BB6E-9FEFEA6F75FF}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>CUDA.NET</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GASS.CUDA</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <DocumentationFile>bin\x86\Release\CUDA.NET.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'LinuxDebug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\LinuxDebug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;LINUX</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'LinuxDebug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\MonoDebug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'LinuxDebug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\MonoDebug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Releasex86|AnyCPU'">
+    <OutputPath>bin\Releasex86\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Releasex86|x86'">
+    <OutputPath>bin\x86\Releasex86\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>bin\x86\Release\CUDA.NET.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Releasex86|x64'">
+    <OutputPath>bin\x64\Releasex86\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib">
+      <Name>mscorlib</Name>
+      <HintPath>mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.BLAS.Types\cublasHandle.cs" />
+    <Compile Include="GASS.CUDA.BLAS\CUBLAS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.BLAS\CUBLASDriver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.BLAS\CUBLASDriverEmulation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.BLAS\CUBLASDriverv2.cs" />
+    <Compile Include="GASS.CUDA.BLAS\CUBLASException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.BLAS\CUBLASPointerMode.cs" />
+    <Compile Include="GASS.CUDA.BLAS\CUBLASStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.BLAS\CUBLASStatusv2.cs" />
+    <Compile Include="GASS.CUDA.BLAS\ICUBLASDriverv2.cs" />
+    <Compile Include="GASS.CUDA.Direct3D\CUD3D10Driver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Direct3D\CUD3D10MapFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Direct3D\CUD3D10RegisterFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Direct3D\CUD3D10Runtime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Direct3D\CUD3D11Driver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Direct3D\CUD3D11Runtime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Direct3D\CUD3D9Driver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Direct3D\CUD3D9MapFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Direct3D\CUD3D9RegisterFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Direct3D\CUD3D9Runtime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Direct3D\cudaD3D10MapFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Direct3D\cudaD3D10RegisterFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Direct3D\cudaD3D9MapFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Direct3D\cudaD3D9RegisterFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Engine\CUDAExecution.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Engine\Parameter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Engine\ParameterDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Engine\ParameterType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.FFT\CUFFTCompatibility.cs" />
+    <Compile Include="GASS.CUDA.FFT.Types\cufftHandle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.FFT\CUFFT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.FFT\CUFFTDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.FFT\CUFFTDriver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.FFT\cufftemuDriverEmulation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.FFT\CUFFTException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.FFT\CUFFTResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.FFT\CUFFTType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.FFT\ICUFFTDriver.cs" />
+    <Compile Include="GASS.CUDA.OpenGL\cudaGLMapFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.OpenGL\CUGLmap_flags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.OpenGL\CUOpenGLDriver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.OpenGL\CUOpenGLRuntime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Tools\CUDAContextSynchronizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Char1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Char2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Char3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Char4.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\CUarray.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\CUcontext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\CUP2PTokens.cs" />
+    <Compile Include="GASS.CUDA.Types\CUdevice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\CUdeviceptr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\cuDoubleComplex.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\cuDoubleReal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\CUevent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\cuFloatComplex.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\cuFloatReal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\CUfunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\CUgraphicsResource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\CUmodule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\CUstream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\CUtexref.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\CUuuid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Double1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Double2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Float1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Float2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Float3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Float4.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Int1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Int2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Int3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Int4.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Long1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Long2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Long3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Long4.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Short1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Short2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Short3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\Short4.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\UChar1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\UChar2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\UChar3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\UChar4.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\UInt1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\UInt2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\UInt3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\UInt4.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\ULong1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\ULong2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\ULong3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\ULong4.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\UShort1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\UShort2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\UShort3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA.Types\UShort4.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUAddressMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUArrayCubemapFace.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUArrayFormat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUComputeMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUCtxFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUDA.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\cudaArray.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUDAArray3DDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUDAArrayDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\cudaChannelFormatDesc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\cudaChannelFormatKind.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\cudaComputeMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\cudaDeviceProp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUDADriver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\cudaError.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\cudaEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUDAException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\cudaExtent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\cudaFuncAttributes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\cudaGraphicsResource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUDAMemCpy2D.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUDAMemCpy3D.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\cudaMemcpy3DParms.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\cudaMemcpyKind.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\cudaPitchedPtr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\cudaPos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUDARuntime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\cudaStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\cudaTextureAddressMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\cudaTextureFilterMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\cudaTextureReadMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUDeviceAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUDeviceProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUEventFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUFilterMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUFunctionAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUFunctionCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUGraphicsMapResourceFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUGraphicsRegisterFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUJITFallback.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUJITOption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUJITTarget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUMemHostAllocFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUMemoryType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\CUPointerAttribute.cs" />
+    <Compile Include="GASS.CUDA\CUResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\Device.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\DeviceProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\InitializationFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\StreamFlags.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.CUDA\textureReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GASS.Types\SizeT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GASS.CUDA.CURAND\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

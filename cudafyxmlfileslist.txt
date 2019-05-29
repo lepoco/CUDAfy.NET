@@ -1,0 +1,7 @@
+﻿Cudafy.NET
+Cudafy.NET\bin\Release\Cudafy.NET_Secure\Cudafy.NET.xml
+3p\cuda.net3.0.0_win\CUDA.NET.XML
+Cudafy.NET\bin\Release\Cudafy.Host.xml
+Cudafy.NET\bin\Release\Cudafy.Math.xml
+Cudafy.NET\bin\Release\Cudafy.Translator.xml
+Cudafy.NET\bin\Release\Cudafy.xml

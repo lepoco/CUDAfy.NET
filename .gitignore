@@ -12,6 +12,9 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+# Visual Studio databse
+/.vs/MaterialWPF/v16/Server/sqlite3
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
