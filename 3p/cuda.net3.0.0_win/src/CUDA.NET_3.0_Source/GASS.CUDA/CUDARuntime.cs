@@ -16,8 +16,8 @@ namespace GASS.CUDA
 #if LINUX
         internal const string DLL_NAME = "libcudart";
 #else
-        internal const string DLL_NAME = "cudart64_70";
-        internal const string DLL_NAME_PREV = "cudart64_65";
+        internal const string DLL_NAME = "cudart64_101";
+        internal const string DLL_NAME_PREV = "cudart64_100";
 #endif
         [DllImport(DLL_NAME)]
         public static extern cudaError cudaGetDeviceProperties(ref cudaDeviceProp prop, int device);
@@ -44,8 +44,8 @@ namespace GASS.CUDA
 #if LINUX
         internal const string DLL_NAME = "libcudart";
 #else
-        internal const string DLL_NAME = "cudart32_70";
-        internal const string DLL_NAME_PREV = "cudart32_65";
+        internal const string DLL_NAME = "cudart32_101";
+        internal const string DLL_NAME_PREV = "cudart32_100";
 #endif
         [DllImport(DLL_NAME)]
         public static extern cudaError cudaGetDeviceProperties(ref cudaDeviceProp prop, int device);
@@ -84,7 +84,7 @@ namespace GASS.CUDA
 #if LINUX
         internal const string CUDART_DLL_NAME = "libcudart";
 #else
-        internal const string CUDART_DLL_NAME = "cudart64_65";
+        internal const string CUDART_DLL_NAME = "cudart64_101";
 #endif
         [DllImport(CUDART_DLL_NAME)]
         public static extern cudaError cudaBindTexture(ref SizeT offset, ref textureReference texref, CUdeviceptr devPtr, ref cudaChannelFormatDesc desc, SizeT size);

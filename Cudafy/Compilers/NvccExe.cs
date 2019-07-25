@@ -18,12 +18,29 @@ namespace Cudafy
             else
                 localKey = RegistryKey.OpenBaseKey( RegistryHive.LocalMachine, RegistryView.Registry64 );
 
-            RegistryKey registryKey = localKey.OpenSubKey( @"SOFTWARE\NVIDIA Corporation\GPU Computing Toolkit\CUDA\v7.0", false );
-            if( null == registryKey )
-                throw new CudafyCompileException( "nVidia GPU Toolkit error: version 7.0 is not installed." );
-            string res = registryKey.GetValue( "InstallDir" ) as string;
-            if( null == res )
-                throw new CudafyCompileException( "nVidia GPU Toolkit error: corrupt installation" );
+            RegistryKey registryKey = localKey.OpenSubKey( @"SOFTWARE\NVIDIA Corporation\GPU Computing Toolkit\CUDA\v10.1", false );
+            if( null == registryKey)
+            {
+                throw new CudafyCompileException("nVidia GPU Toolkit error: version 10.1 is not installed.");
+            }
+
+            string res = null;
+            foreach (var Software in Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall").GetSubKeyNames())
+            {
+                RegistryKey Program = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\" + Software);
+                if (Program.GetValue("DisplayName") != null)
+                {
+                    string name = Convert.ToString(Program.GetValue("DisplayName"));
+                    if (name.Contains("CUDA Version") && Program.GetValue("DisplayVersion") as string == "10.1")
+                        res = Program.GetValue("InstallLocation") as string;
+                }
+            }
+
+            if (null == res)
+            {
+                res = Environment.ExpandEnvironmentVariables("%ProgramW6432%") + "\\NVIDIA GPU Computing Toolkit\\CUDA\\v10.1";
+            }
+
             if( !Directory.Exists( res ) )
                 throw new CudafyCompileException( "nVidia GPU Toolkit error: the installation directory \"" + res + "\" doesn't exist" );
             return res;

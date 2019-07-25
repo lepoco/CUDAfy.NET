@@ -474,11 +474,6 @@
             Represents the <see cref="T:Cloo.ComputeCommandQueue"/> ID.
             </summary>
         </member>
-        <member name="M:Cloo.Bindings.CLCommandQueueHandle.Invalidate">
-            <summary>
-            Invalidates the handle.
-            </summary>
-        </member>
         <member name="P:Cloo.Bindings.CLCommandQueueHandle.IsValid">
             <summary>
             Gets a logic value indicating whether the handle is valid.
@@ -489,14 +484,14 @@
             Gets the value of the handle.
             </summary>
         </member>
+        <member name="M:Cloo.Bindings.CLCommandQueueHandle.Invalidate">
+            <summary>
+            Invalidates the handle.
+            </summary>
+        </member>
         <member name="T:Cloo.Bindings.CLContextHandle">
             <summary>
             Represents the <see cref="T:Cloo.ComputeContext"/> ID.
-            </summary>
-        </member>
-        <member name="M:Cloo.Bindings.CLContextHandle.Invalidate">
-            <summary>
-            Invalidates the handle.
             </summary>
         </member>
         <member name="P:Cloo.Bindings.CLContextHandle.IsValid">
@@ -509,14 +504,14 @@
             Gets the value of the handle.
             </summary>
         </member>
+        <member name="M:Cloo.Bindings.CLContextHandle.Invalidate">
+            <summary>
+            Invalidates the handle.
+            </summary>
+        </member>
         <member name="T:Cloo.Bindings.CLDeviceHandle">
             <summary>
             Represents the <see cref="T:Cloo.ComputeDevice"/> ID.
-            </summary>
-        </member>
-        <member name="M:Cloo.Bindings.CLDeviceHandle.Invalidate">
-            <summary>
-            Invalidates the handle.
             </summary>
         </member>
         <member name="P:Cloo.Bindings.CLDeviceHandle.IsValid">
@@ -529,14 +524,14 @@
             Gets the value of the handle.
             </summary>
         </member>
+        <member name="M:Cloo.Bindings.CLDeviceHandle.Invalidate">
+            <summary>
+            Invalidates the handle.
+            </summary>
+        </member>
         <member name="T:Cloo.Bindings.CLEventHandle">
             <summary>
             Represents the <see cref="T:Cloo.ComputeEvent"/> ID.
-            </summary>
-        </member>
-        <member name="M:Cloo.Bindings.CLEventHandle.Invalidate">
-            <summary>
-            Invalidates the handle.
             </summary>
         </member>
         <member name="P:Cloo.Bindings.CLEventHandle.IsValid">
@@ -549,14 +544,14 @@
             Gets the value of the handle.
             </summary>
         </member>
+        <member name="M:Cloo.Bindings.CLEventHandle.Invalidate">
+            <summary>
+            Invalidates the handle.
+            </summary>
+        </member>
         <member name="T:Cloo.Bindings.CLKernelHandle">
             <summary>
             Represents the <see cref="T:Cloo.ComputeKernel"/> ID.
-            </summary>
-        </member>
-        <member name="M:Cloo.Bindings.CLKernelHandle.Invalidate">
-            <summary>
-            Invalidates the handle.
             </summary>
         </member>
         <member name="P:Cloo.Bindings.CLKernelHandle.IsValid">
@@ -569,14 +564,14 @@
             Gets the value of the handle.
             </summary>
         </member>
+        <member name="M:Cloo.Bindings.CLKernelHandle.Invalidate">
+            <summary>
+            Invalidates the handle.
+            </summary>
+        </member>
         <member name="T:Cloo.Bindings.CLMemoryHandle">
             <summary>
             Represents the <see cref="T:Cloo.ComputeMemory"/> ID.
-            </summary>
-        </member>
-        <member name="M:Cloo.Bindings.CLMemoryHandle.Invalidate">
-            <summary>
-            Invalidates the handle.
             </summary>
         </member>
         <member name="P:Cloo.Bindings.CLMemoryHandle.IsValid">
@@ -589,14 +584,14 @@
             Gets the value of the handle.
             </summary>
         </member>
+        <member name="M:Cloo.Bindings.CLMemoryHandle.Invalidate">
+            <summary>
+            Invalidates the handle.
+            </summary>
+        </member>
         <member name="T:Cloo.Bindings.CLPlatformHandle">
             <summary>
             Represents the <see cref="T:Cloo.ComputePlatform"/> ID.
-            </summary>
-        </member>
-        <member name="M:Cloo.Bindings.CLPlatformHandle.Invalidate">
-            <summary>
-            Invalidates the handle.
             </summary>
         </member>
         <member name="P:Cloo.Bindings.CLPlatformHandle.IsValid">
@@ -609,14 +604,14 @@
             Gets the value of the handle.
             </summary>
         </member>
+        <member name="M:Cloo.Bindings.CLPlatformHandle.Invalidate">
+            <summary>
+            Invalidates the handle.
+            </summary>
+        </member>
         <member name="T:Cloo.Bindings.CLProgramHandle">
             <summary>
             Represents the <see cref="T:Cloo.ComputeProgram"/> ID.
-            </summary>
-        </member>
-        <member name="M:Cloo.Bindings.CLProgramHandle.Invalidate">
-            <summary>
-            Invalidates the handle.
             </summary>
         </member>
         <member name="P:Cloo.Bindings.CLProgramHandle.IsValid">
@@ -629,14 +624,14 @@
             Gets the value of the handle.
             </summary>
         </member>
+        <member name="M:Cloo.Bindings.CLProgramHandle.Invalidate">
+            <summary>
+            Invalidates the handle.
+            </summary>
+        </member>
         <member name="T:Cloo.Bindings.CLSamplerHandle">
             <summary>
             Represents the <see cref="T:Cloo.ComputeSampler"/> ID.
-            </summary>
-        </member>
-        <member name="M:Cloo.Bindings.CLSamplerHandle.Invalidate">
-            <summary>
-            Invalidates the handle.
             </summary>
         </member>
         <member name="P:Cloo.Bindings.CLSamplerHandle.IsValid">
@@ -647,6 +642,11 @@
         <member name="P:Cloo.Bindings.CLSamplerHandle.Value">
             <summary>
             Gets the value of the handle.
+            </summary>
+        </member>
+        <member name="M:Cloo.Bindings.CLSamplerHandle.Invalidate">
+            <summary>
+            Invalidates the handle.
             </summary>
         </member>
         <member name="T:Cloo.Bindings.CLx">
@@ -686,260 +686,6 @@
             <seealso cref="T:Cloo.ComputeKernel"/>
             <seealso cref="T:Cloo.ComputeMemory"/>
         </member>
-        <member name="T:Cloo.ComputeBufferBase`1">
-            <summary>
-            Represents the parent type to any Cloo buffer types.
-            </summary>
-            <typeparam name="T"> The type of the elements of the buffer. </typeparam>
-        </member>
-        <member name="T:Cloo.ComputeMemory">
-            <summary>
-            Represents an OpenCL memory object.
-            </summary>
-            <remarks> A memory object is a handle to a region of global memory. </remarks>
-            <seealso cref="T:Cloo.ComputeBuffer`1"/>
-            <seealso cref="T:Cloo.ComputeImage"/>
-        </member>
-        <member name="T:Cloo.ComputeResource">
-            <summary>
-            Represents an OpenCL resource.
-            </summary>
-            <remarks> An OpenCL resource is an OpenCL object that can be created and deleted by the application. </remarks>
-            <seealso cref="T:Cloo.ComputeObject"/>
-        </member>
-        <member name="T:Cloo.ComputeObject">
-            <summary>
-            Represents an OpenCL object.
-            </summary>
-            <remarks> An OpenCL object is an object that is identified by its handle in the OpenCL environment. </remarks>
-        </member>
-        <member name="M:Cloo.ComputeObject.Equals(System.Object,System.Object)">
-            <summary>
-            Checks if two <c>object</c>s are equal. These <c>object</c>s must be cast from <see cref="T:Cloo.ComputeObject"/>s.
-            </summary>
-            <param name="objA"> The first <c>object</c> to compare. </param>
-            <param name="objB"> The second <c>object</c> to compare. </param>
-            <returns> <c>true</c> if the <c>object</c>s are equal otherwise <c>false</c>. </returns>
-        </member>
-        <member name="M:Cloo.ComputeObject.Equals(System.Object)">
-            <summary>
-            Checks if the <see cref="T:Cloo.ComputeObject"/> is equal to a specified <see cref="T:Cloo.ComputeObject"/> cast to an <c>object</c>.
-            </summary>
-            <param name="obj"> The specified <c>object</c> to compare the <see cref="T:Cloo.ComputeObject"/> with. </param>
-            <returns> <c>true</c> if the <see cref="T:Cloo.ComputeObject"/> is equal with <paramref name="obj"/> otherwise <c>false</c>. </returns>
-        </member>
-        <member name="M:Cloo.ComputeObject.Equals(Cloo.ComputeObject)">
-            <summary>
-            Checks if the <see cref="T:Cloo.ComputeObject"/> is equal to a specified <see cref="T:Cloo.ComputeObject"/>.
-            </summary>
-            <param name="obj"> The specified <see cref="T:Cloo.ComputeObject"/> to compare the <see cref="T:Cloo.ComputeObject"/> with. </param>
-            <returns> <c>true</c> if the <see cref="T:Cloo.ComputeObject"/> is equal with <paramref name="obj"/> otherwise <c>false</c>. </returns>
-        </member>
-        <member name="M:Cloo.ComputeObject.GetHashCode">
-            <summary>
-            Gets the hash code of the <see cref="T:Cloo.ComputeObject"/>.
-            </summary>
-            <returns> The hash code of the <see cref="T:Cloo.ComputeObject"/>. </returns>
-        </member>
-        <member name="M:Cloo.ComputeObject.ToString">
-            <summary>
-            Gets the string representation of the <see cref="T:Cloo.ComputeObject"/>.
-            </summary>
-            <returns> The string representation of the <see cref="T:Cloo.ComputeObject"/>. </returns>
-        </member>
-        <member name="M:Cloo.ComputeObject.GetArrayInfo``3(``0,``1,Cloo.ComputeObject.GetInfoDelegate{``0,``1})">
-            <summary>
-            
-            </summary>
-            <typeparam name="HandleType"></typeparam>
-            <typeparam name="InfoType"></typeparam>
-            <typeparam name="QueriedType"></typeparam>
-            <param name="handle"></param>
-            <param name="paramName"></param>
-            <param name="getInfoDelegate"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Cloo.ComputeObject.GetArrayInfo``4(``0,``1,``2,Cloo.ComputeObject.GetInfoDelegateEx{``0,``1,``2})">
-            <summary>
-            
-            </summary>
-            <typeparam name="MainHandleType"></typeparam>
-            <typeparam name="SecondHandleType"></typeparam>
-            <typeparam name="InfoType"></typeparam>
-            <typeparam name="QueriedType"></typeparam>
-            <param name="mainHandle"></param>
-            <param name="secondHandle"></param>
-            <param name="paramName"></param>
-            <param name="getInfoDelegate"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Cloo.ComputeObject.GetBoolInfo``2(``0,``1,Cloo.ComputeObject.GetInfoDelegate{``0,``1})">
-            <summary>
-            
-            </summary>
-            <typeparam name="HandleType"></typeparam>
-            <typeparam name="InfoType"></typeparam>
-            <param name="handle"></param>
-            <param name="paramName"></param>
-            <param name="getInfoDelegate"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Cloo.ComputeObject.GetInfo``3(``0,``1,Cloo.ComputeObject.GetInfoDelegate{``0,``1})">
-            <summary>
-            
-            </summary>
-            <typeparam name="HandleType"></typeparam>
-            <typeparam name="InfoType"></typeparam>
-            <typeparam name="QueriedType"></typeparam>
-            <param name="handle"></param>
-            <param name="paramName"></param>
-            <param name="getInfoDelegate"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Cloo.ComputeObject.GetInfo``4(``0,``1,``2,Cloo.ComputeObject.GetInfoDelegateEx{``0,``1,``2})">
-            <summary>
-            
-            </summary>
-            <typeparam name="MainHandleType"></typeparam>
-            <typeparam name="SecondHandleType"></typeparam>
-            <typeparam name="InfoType"></typeparam>
-            <typeparam name="QueriedType"></typeparam>
-            <param name="mainHandle"></param>
-            <param name="secondHandle"></param>
-            <param name="paramName"></param>
-            <param name="getInfoDelegate"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Cloo.ComputeObject.GetStringInfo``2(``0,``1,Cloo.ComputeObject.GetInfoDelegate{``0,``1})">
-            <summary>
-            
-            </summary>
-            <typeparam name="HandleType"></typeparam>
-            <typeparam name="InfoType"></typeparam>
-            <param name="handle"></param>
-            <param name="paramName"></param>
-            <param name="getInfoDelegate"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Cloo.ComputeObject.GetStringInfo``3(``0,``1,``2,Cloo.ComputeObject.GetInfoDelegateEx{``0,``1,``2})">
-            <summary>
-            
-            </summary>
-            <typeparam name="MainHandleType"></typeparam>
-            <typeparam name="SecondHandleType"></typeparam>
-            <typeparam name="InfoType"></typeparam>
-            <param name="mainHandle"></param>
-            <param name="secondHandle"></param>
-            <param name="paramName"></param>
-            <param name="getInfoDelegate"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Cloo.ComputeObject.SetID(System.IntPtr)">
-            <summary>
-            
-            </summary>
-            <param name="id"></param>
-        </member>
-        <member name="T:Cloo.ComputeObject.GetInfoDelegate`2">
-            <summary>
-            
-            </summary>
-            <typeparam name="HandleType"></typeparam>
-            <typeparam name="InfoType"></typeparam>
-            <param name="objectHandle"></param>
-            <param name="paramName"></param>
-            <param name="paramValueSize"></param>
-            <param name="paramValue"></param>
-            <param name="paramValueSizeRet"></param>
-            <returns></returns>
-        </member>
-        <member name="T:Cloo.ComputeObject.GetInfoDelegateEx`3">
-            <summary>
-            
-            </summary>
-            <typeparam name="MainHandleType"></typeparam>
-            <typeparam name="SecondHandleType"></typeparam>
-            <typeparam name="InfoType"></typeparam>
-            <param name="mainObjectHandle"></param>
-            <param name="secondaryObjectHandle"></param>
-            <param name="paramName"></param>
-            <param name="paramValueSize"></param>
-            <param name="paramValue"></param>
-            <param name="paramValueSizeRet"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Cloo.ComputeResource.Dispose">
-            <summary>
-            Deletes the <see cref="T:Cloo.ComputeResource"/> and frees its accompanying OpenCL resources.
-            </summary>
-        </member>
-        <member name="M:Cloo.ComputeResource.Dispose(System.Boolean)">
-            <summary>
-            Releases the associated OpenCL object.
-            </summary>
-            <param name="manual"> Specifies the operation mode of this method. </param>
-            <remarks> <paramref name="manual"/> must be <c>true</c> if this method is invoked directly by the application. </remarks>
-        </member>
-        <member name="M:Cloo.ComputeResource.Finalize">
-            <summary>
-            Releases the associated OpenCL object.
-            </summary>
-        </member>
-        <member name="M:Cloo.ComputeMemory.#ctor(Cloo.ComputeContext,Cloo.ComputeMemoryFlags)">
-            <summary>
-            
-            </summary>
-            <param name="context"></param>
-            <param name="flags"></param>
-        </member>
-        <member name="M:Cloo.ComputeMemory.Dispose(System.Boolean)">
-            <summary>
-            Releases the associated OpenCL object.
-            </summary>
-            <param name="manual"> Specifies the operation mode of this method. </param>
-            <remarks> <paramref name="manual"/> must be <c>true</c> if this method is invoked directly by the application. </remarks>
-        </member>
-        <member name="P:Cloo.ComputeMemory.Handle">
-            <summary>
-            The handle of the <see cref="T:Cloo.ComputeMemory"/>.
-            </summary>
-        </member>
-        <member name="P:Cloo.ComputeMemory.Context">
-            <summary>
-            Gets the <see cref="T:Cloo.ComputeContext"/> of the <see cref="T:Cloo.ComputeMemory"/>.
-            </summary>
-            <value> The <see cref="T:Cloo.ComputeContext"/> of the <see cref="T:Cloo.ComputeMemory"/>. </value>
-        </member>
-        <member name="P:Cloo.ComputeMemory.Flags">
-            <summary>
-            Gets the <see cref="T:Cloo.ComputeMemoryFlags"/> of the <see cref="T:Cloo.ComputeMemory"/>.
-            </summary>
-            <value> The <see cref="T:Cloo.ComputeMemoryFlags"/> of the <see cref="T:Cloo.ComputeMemory"/>. </value>
-        </member>
-        <member name="P:Cloo.ComputeMemory.Size">
-            <summary>
-            Gets or sets (protected) the size in bytes of the <see cref="T:Cloo.ComputeMemory"/>.
-            </summary>
-            <value> The size in bytes of the <see cref="T:Cloo.ComputeMemory"/>. </value>
-        </member>
-        <member name="M:Cloo.ComputeBufferBase`1.#ctor(Cloo.ComputeContext,Cloo.ComputeMemoryFlags)">
-            <summary>
-            
-            </summary>
-            <param name="context"></param>
-            <param name="flags"></param>
-        </member>
-        <member name="M:Cloo.ComputeBufferBase`1.Init">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Cloo.ComputeBufferBase`1.Count">
-            <summary>
-            Gets the number of elements in the <see cref="T:Cloo.ComputeBufferBase`1"/>.
-            </summary>
-            <value> The number of elements in the <see cref="T:Cloo.ComputeBufferBase`1"/>. </value>
-        </member>
         <member name="M:Cloo.ComputeBuffer`1.#ctor(Cloo.ComputeContext,Cloo.ComputeMemoryFlags,System.Int64)">
             <summary>
             Creates a new <see cref="T:Cloo.ComputeBuffer`1"/>.
@@ -975,6 +721,30 @@
             <param name="flags"> A bit-field that is used to specify usage information about the <see cref="T:Cloo.ComputeBuffer`1"/>. Only <see cref="F:Cloo.ComputeMemoryFlags.ReadOnly"/>, <see cref="F:Cloo.ComputeMemoryFlags.WriteOnly"/> and <see cref="F:Cloo.ComputeMemoryFlags.ReadWrite"/> are allowed. </param>
             <param name="bufferId"> The OpenGL buffer object id to use for the creation of the <see cref="T:Cloo.ComputeBuffer`1"/>. </param>
             <returns> The created <see cref="T:Cloo.ComputeBuffer`1"/>. </returns>
+        </member>
+        <member name="T:Cloo.ComputeBufferBase`1">
+            <summary>
+            Represents the parent type to any Cloo buffer types.
+            </summary>
+            <typeparam name="T"> The type of the elements of the buffer. </typeparam>
+        </member>
+        <member name="P:Cloo.ComputeBufferBase`1.Count">
+            <summary>
+            Gets the number of elements in the <see cref="T:Cloo.ComputeBufferBase`1"/>.
+            </summary>
+            <value> The number of elements in the <see cref="T:Cloo.ComputeBufferBase`1"/>. </value>
+        </member>
+        <member name="M:Cloo.ComputeBufferBase`1.#ctor(Cloo.ComputeContext,Cloo.ComputeMemoryFlags)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="flags"></param>
+        </member>
+        <member name="M:Cloo.ComputeBufferBase`1.Init">
+            <summary>
+            
+            </summary>
         </member>
         <member name="T:Cloo.ComputeCommandQueue">
             <summary>
@@ -1490,6 +1260,35 @@
             <param name="destinationSlicePitch"> The size of a 2D slice of pixels of <paramref name="destination"/> in bytes. </param>
             <param name="events"> A collection of events that need to complete before this particular command can be executed. If <paramref name="events"/> is not <c>null</c> a new event identifying this command is attached to the end of the collection. </param>
         </member>
+        <member name="P:Cloo.ComputeCommandQueue.Handle">
+            <summary>
+            The handle of the <see cref="T:Cloo.ComputeCommandQueue"/>.
+            </summary>
+        </member>
+        <member name="P:Cloo.ComputeCommandQueue.Context">
+            <summary>
+            Gets the <see cref="T:Cloo.ComputeContext"/> of the <see cref="T:Cloo.ComputeCommandQueue"/>.
+            </summary>
+            <value> The <see cref="T:Cloo.ComputeContext"/> of the <see cref="T:Cloo.ComputeCommandQueue"/>. </value>
+        </member>
+        <member name="P:Cloo.ComputeCommandQueue.Device">
+            <summary>
+            Gets the <see cref="T:Cloo.ComputeDevice"/> of the <see cref="T:Cloo.ComputeCommandQueue"/>.
+            </summary>
+            <value> The <see cref="T:Cloo.ComputeDevice"/> of the <see cref="T:Cloo.ComputeCommandQueue"/>. </value>
+        </member>
+        <member name="P:Cloo.ComputeCommandQueue.OutOfOrderExecution">
+            <summary>
+            Gets the out-of-order execution mode of the commands in the <see cref="T:Cloo.ComputeCommandQueue"/>.
+            </summary>
+            <value> Is <c>true</c> if <see cref="T:Cloo.ComputeCommandQueue"/> has out-of-order execution mode enabled and <c>false</c> otherwise. </value>
+        </member>
+        <member name="P:Cloo.ComputeCommandQueue.Profiling">
+            <summary>
+            Gets the profiling mode of the commands in the <see cref="T:Cloo.ComputeCommandQueue"/>.
+            </summary>
+            <value> Is <c>true</c> if <see cref="T:Cloo.ComputeCommandQueue"/> has profiling enabled and <c>false</c> otherwise. </value>
+        </member>
         <member name="M:Cloo.ComputeCommandQueue.#ctor(Cloo.ComputeContext,Cloo.ComputeDevice,Cloo.ComputeCommandQueueFlags)">
             <summary>
             Creates a new <see cref="T:Cloo.ComputeCommandQueue"/>.
@@ -1759,35 +1558,6 @@
             <param name="manual"> Specifies the operation mode of this method. </param>
             <remarks> <paramref name="manual"/> must be <c>true</c> if this method is invoked directly by the application. </remarks>
         </member>
-        <member name="P:Cloo.ComputeCommandQueue.Handle">
-            <summary>
-            The handle of the <see cref="T:Cloo.ComputeCommandQueue"/>.
-            </summary>
-        </member>
-        <member name="P:Cloo.ComputeCommandQueue.Context">
-            <summary>
-            Gets the <see cref="T:Cloo.ComputeContext"/> of the <see cref="T:Cloo.ComputeCommandQueue"/>.
-            </summary>
-            <value> The <see cref="T:Cloo.ComputeContext"/> of the <see cref="T:Cloo.ComputeCommandQueue"/>. </value>
-        </member>
-        <member name="P:Cloo.ComputeCommandQueue.Device">
-            <summary>
-            Gets the <see cref="T:Cloo.ComputeDevice"/> of the <see cref="T:Cloo.ComputeCommandQueue"/>.
-            </summary>
-            <value> The <see cref="T:Cloo.ComputeDevice"/> of the <see cref="T:Cloo.ComputeCommandQueue"/>. </value>
-        </member>
-        <member name="P:Cloo.ComputeCommandQueue.OutOfOrderExecution">
-            <summary>
-            Gets the out-of-order execution mode of the commands in the <see cref="T:Cloo.ComputeCommandQueue"/>.
-            </summary>
-            <value> Is <c>true</c> if <see cref="T:Cloo.ComputeCommandQueue"/> has out-of-order execution mode enabled and <c>false</c> otherwise. </value>
-        </member>
-        <member name="P:Cloo.ComputeCommandQueue.Profiling">
-            <summary>
-            Gets the profiling mode of the commands in the <see cref="T:Cloo.ComputeCommandQueue"/>.
-            </summary>
-            <value> Is <c>true</c> if <see cref="T:Cloo.ComputeCommandQueue"/> has profiling enabled and <c>false</c> otherwise. </value>
-        </member>
         <member name="T:Cloo.ComputeCompiler">
             <summary>
             Represents the OpenCL compiler.
@@ -1845,6 +1615,29 @@
             <seealso cref="T:Cloo.ComputeDevice"/>
             <seealso cref="T:Cloo.ComputePlatform"/>
         </member>
+        <member name="P:Cloo.ComputeContext.Handle">
+            <summary>
+            The handle of the <see cref="T:Cloo.ComputeContext"/>.
+            </summary>
+        </member>
+        <member name="P:Cloo.ComputeContext.Devices">
+            <summary>
+            Gets a read-only collection of the <see cref="T:Cloo.ComputeDevice"/>s of the <see cref="T:Cloo.ComputeContext"/>.
+            </summary>
+            <value> A read-only collection of the <see cref="T:Cloo.ComputeDevice"/>s of the <see cref="T:Cloo.ComputeContext"/>. </value>
+        </member>
+        <member name="P:Cloo.ComputeContext.Platform">
+            <summary>
+            Gets the <see cref="T:Cloo.ComputePlatform"/> of the <see cref="T:Cloo.ComputeContext"/>.
+            </summary>
+            <value> The <see cref="T:Cloo.ComputePlatform"/> of the <see cref="T:Cloo.ComputeContext"/>. </value>
+        </member>
+        <member name="P:Cloo.ComputeContext.Properties">
+            <summary>
+            Gets a collection of <see cref="T:Cloo.ComputeContextProperty"/>s of the <see cref="T:Cloo.ComputeContext"/>.
+            </summary>
+            <value> A collection of <see cref="T:Cloo.ComputeContextProperty"/>s of the <see cref="T:Cloo.ComputeContext"/>. </value>
+        </member>
         <member name="M:Cloo.ComputeContext.#ctor(System.Collections.Generic.ICollection{Cloo.ComputeDevice},Cloo.ComputeContextPropertyList,Cloo.Bindings.ComputeContextNotifier,System.IntPtr)">
             <summary>
             Creates a new <see cref="T:Cloo.ComputeContext"/> on a collection of <see cref="T:Cloo.ComputeDevice"/>s.
@@ -1869,29 +1662,6 @@
             </summary>
             <param name="manual"> Specifies the operation mode of this method. </param>
             <remarks> <paramref name="manual"/> must be <c>true</c> if this method is invoked directly by the application. </remarks>
-        </member>
-        <member name="P:Cloo.ComputeContext.Handle">
-            <summary>
-            The handle of the <see cref="T:Cloo.ComputeContext"/>.
-            </summary>
-        </member>
-        <member name="P:Cloo.ComputeContext.Devices">
-            <summary>
-            Gets a read-only collection of the <see cref="T:Cloo.ComputeDevice"/>s of the <see cref="T:Cloo.ComputeContext"/>.
-            </summary>
-            <value> A read-only collection of the <see cref="T:Cloo.ComputeDevice"/>s of the <see cref="T:Cloo.ComputeContext"/>. </value>
-        </member>
-        <member name="P:Cloo.ComputeContext.Platform">
-            <summary>
-            Gets the <see cref="T:Cloo.ComputePlatform"/> of the <see cref="T:Cloo.ComputeContext"/>.
-            </summary>
-            <value> The <see cref="T:Cloo.ComputePlatform"/> of the <see cref="T:Cloo.ComputeContext"/>. </value>
-        </member>
-        <member name="P:Cloo.ComputeContext.Properties">
-            <summary>
-            Gets a collection of <see cref="T:Cloo.ComputeContextProperty"/>s of the <see cref="T:Cloo.ComputeContext"/>.
-            </summary>
-            <value> A collection of <see cref="T:Cloo.ComputeContextProperty"/>s of the <see cref="T:Cloo.ComputeContext"/>. </value>
         </member>
         <member name="T:Cloo.ComputeContextPropertyList">
             <summary>
@@ -1945,6 +1715,16 @@
             <param name="array"></param>
             <param name="arrayIndex"></param>
         </member>
+        <member name="P:Cloo.ComputeContextPropertyList.Count">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Cloo.ComputeContextPropertyList.IsReadOnly">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:Cloo.ComputeContextPropertyList.Remove(Cloo.ComputeContextProperty)">
             <summary>
             
@@ -1958,21 +1738,23 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="P:Cloo.ComputeContextPropertyList.Count">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Cloo.ComputeContextPropertyList.IsReadOnly">
-            <summary>
-            
-            </summary>
-        </member>
         <member name="T:Cloo.ComputeContextProperty">
             <summary>
             Represents an OpenCL context property.
             </summary>
             <remarks> An OpenCL context property is a (name, value) data pair. </remarks>
+        </member>
+        <member name="P:Cloo.ComputeContextProperty.Name">
+            <summary>
+            Gets the <see cref="T:Cloo.ComputeContextPropertyName"/> of the <see cref="T:Cloo.ComputeContextProperty"/>.
+            </summary>
+            <value> The <see cref="T:Cloo.ComputeContextPropertyName"/> of the <see cref="T:Cloo.ComputeContextProperty"/>. </value>
+        </member>
+        <member name="P:Cloo.ComputeContextProperty.Value">
+            <summary>
+            Gets the value of the <see cref="T:Cloo.ComputeContextProperty"/>.
+            </summary>
+            <value> The value of the <see cref="T:Cloo.ComputeContextProperty"/>. </value>
         </member>
         <member name="M:Cloo.ComputeContextProperty.#ctor(Cloo.ComputeContextPropertyName,System.IntPtr)">
             <summary>
@@ -1986,18 +1768,6 @@
             Gets the string representation of the <see cref="T:Cloo.ComputeContextProperty"/>.
             </summary>
             <returns> The string representation of the <see cref="T:Cloo.ComputeContextProperty"/>. </returns>
-        </member>
-        <member name="P:Cloo.ComputeContextProperty.Name">
-            <summary>
-            Gets the <see cref="T:Cloo.ComputeContextPropertyName"/> of the <see cref="T:Cloo.ComputeContextProperty"/>.
-            </summary>
-            <value> The <see cref="T:Cloo.ComputeContextPropertyName"/> of the <see cref="T:Cloo.ComputeContextProperty"/>. </value>
-        </member>
-        <member name="P:Cloo.ComputeContextProperty.Value">
-            <summary>
-            Gets the value of the <see cref="T:Cloo.ComputeContextProperty"/>.
-            </summary>
-            <value> The value of the <see cref="T:Cloo.ComputeContextProperty"/>. </value>
         </member>
         <member name="T:Cloo.ComputeDevice">
             <summary>
@@ -2446,38 +2216,25 @@
             <seealso cref="T:Cloo.ComputeCommandQueue"/>
             <seealso cref="T:Cloo.ComputeContext"/>
         </member>
-        <member name="T:Cloo.ComputeEventBase">
+        <member name="P:Cloo.ComputeEvent.CommandQueue">
             <summary>
-            Represents the parent type to any Cloo event types.
+            Gets the <see cref="T:Cloo.ComputeCommandQueue"/> associated with the <see cref="T:Cloo.ComputeEvent"/>.
             </summary>
-            <seealso cref="T:Cloo.ComputeEvent"/>
-            <seealso cref="T:Cloo.ComputeUserEvent"/>
+            <value> The <see cref="T:Cloo.ComputeCommandQueue"/> associated with the <see cref="T:Cloo.ComputeEvent"/>. </value>
         </member>
-        <member name="M:Cloo.ComputeEventBase.Dispose(System.Boolean)">
+        <member name="M:Cloo.ComputeEvent.Dispose(System.Boolean)">
             <summary>
             Releases the associated OpenCL object.
             </summary>
             <param name="manual"> Specifies the operation mode of this method. </param>
             <remarks> <paramref name="manual"/> must be <c>true</c> if this method is invoked directly by the application. </remarks>
         </member>
-        <member name="M:Cloo.ComputeEventBase.HookNotifier">
+        <member name="T:Cloo.ComputeEventBase">
             <summary>
-            
+            Represents the parent type to any Cloo event types.
             </summary>
-        </member>
-        <member name="M:Cloo.ComputeEventBase.OnCompleted(System.Object,Cloo.ComputeCommandStatusArgs)">
-            <summary>
-            
-            </summary>
-            <param name="sender"></param>
-            <param name="evArgs"></param>
-        </member>
-        <member name="M:Cloo.ComputeEventBase.OnAborted(System.Object,Cloo.ComputeCommandStatusArgs)">
-            <summary>
-            
-            </summary>
-            <param name="sender"></param>
-            <param name="evArgs"></param>
+            <seealso cref="T:Cloo.ComputeEvent"/>
+            <seealso cref="T:Cloo.ComputeUserEvent"/>
         </member>
         <member name="E:Cloo.ComputeEventBase.Aborted">
             <summary>
@@ -2538,23 +2295,47 @@
             </summary>
             <value> The <see cref="T:Cloo.ComputeCommandType"/> associated with the event. </value>
         </member>
-        <member name="M:Cloo.ComputeEvent.Dispose(System.Boolean)">
+        <member name="M:Cloo.ComputeEventBase.Dispose(System.Boolean)">
             <summary>
             Releases the associated OpenCL object.
             </summary>
             <param name="manual"> Specifies the operation mode of this method. </param>
             <remarks> <paramref name="manual"/> must be <c>true</c> if this method is invoked directly by the application. </remarks>
         </member>
-        <member name="P:Cloo.ComputeEvent.CommandQueue">
+        <member name="M:Cloo.ComputeEventBase.HookNotifier">
             <summary>
-            Gets the <see cref="T:Cloo.ComputeCommandQueue"/> associated with the <see cref="T:Cloo.ComputeEvent"/>.
+            
             </summary>
-            <value> The <see cref="T:Cloo.ComputeCommandQueue"/> associated with the <see cref="T:Cloo.ComputeEvent"/>. </value>
+        </member>
+        <member name="M:Cloo.ComputeEventBase.OnCompleted(System.Object,Cloo.ComputeCommandStatusArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="evArgs"></param>
+        </member>
+        <member name="M:Cloo.ComputeEventBase.OnAborted(System.Object,Cloo.ComputeCommandStatusArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="evArgs"></param>
         </member>
         <member name="T:Cloo.ComputeCommandStatusArgs">
             <summary>
             Represents the arguments of a command status change.
             </summary>
+        </member>
+        <member name="P:Cloo.ComputeCommandStatusArgs.Event">
+            <summary>
+            Gets the event associated with the command that had its status changed.
+            </summary>
+        </member>
+        <member name="P:Cloo.ComputeCommandStatusArgs.Status">
+            <summary>
+            Gets the execution status of the command represented by the event.
+            </summary>
+            <remarks> Returns a negative integer if the command was abnormally terminated. </remarks>
         </member>
         <member name="M:Cloo.ComputeCommandStatusArgs.#ctor(Cloo.ComputeEventBase,Cloo.ComputeCommandExecutionStatus)">
             <summary>
@@ -2569,17 +2350,6 @@
             </summary>
             <param name="ev"> The event of the command that had its status changed. </param>
             <param name="status"> The status of the command. </param>
-        </member>
-        <member name="P:Cloo.ComputeCommandStatusArgs.Event">
-            <summary>
-            Gets the event associated with the command that had its status changed.
-            </summary>
-        </member>
-        <member name="P:Cloo.ComputeCommandStatusArgs.Status">
-            <summary>
-            Gets the execution status of the command represented by the event.
-            </summary>
-            <remarks> Returns a negative integer if the command was abnormally terminated. </remarks>
         </member>
         <member name="T:Cloo.ComputeCommandStatusChanged">
             <summary>
@@ -2604,6 +2374,12 @@
             Creates a new <see cref="T:Cloo.ComputeEventList"/> from an existing list of <see cref="T:Cloo.ComputeEventBase"/>s.
             </summary>
             <param name="events"> A list of <see cref="T:Cloo.ComputeEventBase"/>s. </param>
+        </member>
+        <member name="P:Cloo.ComputeEventList.Last">
+            <summary>
+            Gets the last <see cref="T:Cloo.ComputeEventBase"/> on the list.
+            </summary>
+            <value> The last <see cref="T:Cloo.ComputeEventBase"/> on the list. </value>
         </member>
         <member name="M:Cloo.ComputeEventList.Wait(System.Collections.Generic.ICollection{Cloo.ComputeEventBase})">
             <summary>
@@ -2636,6 +2412,13 @@
             </summary>
             <param name="index"></param>
         </member>
+        <member name="P:Cloo.ComputeEventList.Item(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
         <member name="M:Cloo.ComputeEventList.Add(Cloo.ComputeEventBase)">
             <summary>
             
@@ -2661,6 +2444,16 @@
             <param name="array"></param>
             <param name="arrayIndex"></param>
         </member>
+        <member name="P:Cloo.ComputeEventList.Count">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Cloo.ComputeEventList.IsReadOnly">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:Cloo.ComputeEventList.Remove(Cloo.ComputeEventBase)">
             <summary>
             
@@ -2674,34 +2467,16 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="P:Cloo.ComputeEventList.Last">
-            <summary>
-            Gets the last <see cref="T:Cloo.ComputeEventBase"/> on the list.
-            </summary>
-            <value> The last <see cref="T:Cloo.ComputeEventBase"/> on the list. </value>
-        </member>
-        <member name="P:Cloo.ComputeEventList.Item(System.Int32)">
-            <summary>
-            
-            </summary>
-            <param name="index"></param>
-            <returns></returns>
-        </member>
-        <member name="P:Cloo.ComputeEventList.Count">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Cloo.ComputeEventList.IsReadOnly">
-            <summary>
-            
-            </summary>
-        </member>
         <member name="T:Cloo.ComputeException">
             <summary>
             Represents an error state that occurred while executing an OpenCL API call.
             </summary>
             <seealso cref="P:Cloo.ComputeException.ComputeErrorCode"/>
+        </member>
+        <member name="P:Cloo.ComputeException.ComputeErrorCode">
+            <summary>
+            Gets the <see cref="P:Cloo.ComputeException.ComputeErrorCode"/> of the <see cref="T:Cloo.ComputeException"/>.
+            </summary>
         </member>
         <member name="M:Cloo.ComputeException.#ctor(Cloo.ComputeErrorCode)">
             <summary>
@@ -2721,11 +2496,6 @@
             </summary>
             <param name="errorCode"> The OpenCL error code. </param>
         </member>
-        <member name="P:Cloo.ComputeException.ComputeErrorCode">
-            <summary>
-            Gets the <see cref="P:Cloo.ComputeException.ComputeErrorCode"/> of the <see cref="T:Cloo.ComputeException"/>.
-            </summary>
-        </member>
         <member name="T:Cloo.ComputeImage">
             <summary>
             Represents an OpenCL image.
@@ -2733,27 +2503,6 @@
             <remarks> A memory object that stores a two- or three- dimensional structured array. Image data can only be accessed with read and write functions. The read functions use a sampler. </remarks>
             <seealso cref="T:Cloo.ComputeMemory"/>
             <seealso cref="T:Cloo.ComputeSampler"/>
-        </member>
-        <member name="M:Cloo.ComputeImage.#ctor(Cloo.ComputeContext,Cloo.ComputeMemoryFlags)">
-            <summary>
-            
-            </summary>
-            <param name="context"></param>
-            <param name="flags"></param>
-        </member>
-        <member name="M:Cloo.ComputeImage.GetSupportedFormats(Cloo.ComputeContext,Cloo.ComputeMemoryFlags,Cloo.ComputeMemoryType)">
-            <summary>
-            
-            </summary>
-            <param name="context"></param>
-            <param name="flags"></param>
-            <param name="type"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Cloo.ComputeImage.Init">
-            <summary>
-            
-            </summary>
         </member>
         <member name="P:Cloo.ComputeImage.Depth">
             <summary>
@@ -2790,6 +2539,27 @@
             Gets or sets (protected) the width in pixels of the <see cref="T:Cloo.ComputeImage"/>.
             </summary>
             <value> The width in pixels of the <see cref="T:Cloo.ComputeImage"/>. </value>
+        </member>
+        <member name="M:Cloo.ComputeImage.#ctor(Cloo.ComputeContext,Cloo.ComputeMemoryFlags)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="flags"></param>
+        </member>
+        <member name="M:Cloo.ComputeImage.GetSupportedFormats(Cloo.ComputeContext,Cloo.ComputeMemoryFlags,Cloo.ComputeMemoryType)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="flags"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cloo.ComputeImage.Init">
+            <summary>
+            
+            </summary>
         </member>
         <member name="T:Cloo.ComputeImage2D">
             <summary>
@@ -2883,13 +2653,6 @@
             <remarks> This structure defines the type, count and size of the image channels. </remarks>
             <seealso cref="T:Cloo.ComputeImage"/>
         </member>
-        <member name="M:Cloo.ComputeImageFormat.#ctor(Cloo.ComputeImageChannelOrder,Cloo.ComputeImageChannelType)">
-            <summary>
-            Creates a new <see cref="T:Cloo.ComputeImageFormat"/>.
-            </summary>
-            <param name="channelOrder"> The number of channels and the channel layout i.e. the memory layout in which channels are stored in the <see cref="T:Cloo.ComputeImage"/>. </param>
-            <param name="channelType"> The type of the channel data. The number of bits per element determined by the <paramref name="channelType"/> and <paramref name="channelOrder"/> must be a power of two. </param>
-        </member>
         <member name="P:Cloo.ComputeImageFormat.ChannelOrder">
             <summary>
             Gets the <see cref="T:Cloo.ComputeImageChannelOrder"/> of the <see cref="T:Cloo.ComputeImage"/>.
@@ -2902,6 +2665,13 @@
             </summary>
             <value> The <see cref="T:Cloo.ComputeImageChannelType"/> of the <see cref="T:Cloo.ComputeImage"/>. </value>
         </member>
+        <member name="M:Cloo.ComputeImageFormat.#ctor(Cloo.ComputeImageChannelOrder,Cloo.ComputeImageChannelType)">
+            <summary>
+            Creates a new <see cref="T:Cloo.ComputeImageFormat"/>.
+            </summary>
+            <param name="channelOrder"> The number of channels and the channel layout i.e. the memory layout in which channels are stored in the <see cref="T:Cloo.ComputeImage"/>. </param>
+            <param name="channelType"> The type of the channel data. The number of bits per element determined by the <paramref name="channelType"/> and <paramref name="channelOrder"/> must be a power of two. </param>
+        </member>
         <member name="T:Cloo.ComputeKernel">
             <summary>
             Represents an OpenCL kernel.
@@ -2909,6 +2679,29 @@
             <remarks> A kernel object encapsulates a specific kernel function declared in a program and the argument values to be used when executing this kernel function. </remarks>
             <seealso cref="T:Cloo.ComputeCommandQueue"/>
             <seealso cref="T:Cloo.ComputeProgram"/>
+        </member>
+        <member name="P:Cloo.ComputeKernel.Handle">
+            <summary>
+            The handle of the <see cref="T:Cloo.ComputeKernel"/>.
+            </summary>
+        </member>
+        <member name="P:Cloo.ComputeKernel.Context">
+            <summary>
+            Gets the <see cref="T:Cloo.ComputeContext"/> associated with the <see cref="T:Cloo.ComputeKernel"/>.
+            </summary>
+            <value> The <see cref="T:Cloo.ComputeContext"/> associated with the <see cref="T:Cloo.ComputeKernel"/>. </value>
+        </member>
+        <member name="P:Cloo.ComputeKernel.FunctionName">
+            <summary>
+            Gets the function name of the <see cref="T:Cloo.ComputeKernel"/>.
+            </summary>
+            <value> The function name of the <see cref="T:Cloo.ComputeKernel"/>. </value>
+        </member>
+        <member name="P:Cloo.ComputeKernel.Program">
+            <summary>
+            Gets the <see cref="T:Cloo.ComputeProgram"/> that the <see cref="T:Cloo.ComputeKernel"/> belongs to.
+            </summary>
+            <value> The <see cref="T:Cloo.ComputeProgram"/> that the <see cref="T:Cloo.ComputeKernel"/> belongs to. </value>
         </member>
         <member name="M:Cloo.ComputeKernel.GetLocalMemorySize(Cloo.ComputeDevice)">
             <summary>
@@ -3017,28 +2810,211 @@
             <param name="manual"> Specifies the operation mode of this method. </param>
             <remarks> <paramref name="manual"/> must be <c>true</c> if this method is invoked directly by the application. </remarks>
         </member>
-        <member name="P:Cloo.ComputeKernel.Handle">
+        <member name="T:Cloo.ComputeMemory">
             <summary>
-            The handle of the <see cref="T:Cloo.ComputeKernel"/>.
+            Represents an OpenCL memory object.
+            </summary>
+            <remarks> A memory object is a handle to a region of global memory. </remarks>
+            <seealso cref="T:Cloo.ComputeBuffer`1"/>
+            <seealso cref="T:Cloo.ComputeImage"/>
+        </member>
+        <member name="P:Cloo.ComputeMemory.Handle">
+            <summary>
+            The handle of the <see cref="T:Cloo.ComputeMemory"/>.
             </summary>
         </member>
-        <member name="P:Cloo.ComputeKernel.Context">
+        <member name="P:Cloo.ComputeMemory.Context">
             <summary>
-            Gets the <see cref="T:Cloo.ComputeContext"/> associated with the <see cref="T:Cloo.ComputeKernel"/>.
+            Gets the <see cref="T:Cloo.ComputeContext"/> of the <see cref="T:Cloo.ComputeMemory"/>.
             </summary>
-            <value> The <see cref="T:Cloo.ComputeContext"/> associated with the <see cref="T:Cloo.ComputeKernel"/>. </value>
+            <value> The <see cref="T:Cloo.ComputeContext"/> of the <see cref="T:Cloo.ComputeMemory"/>. </value>
         </member>
-        <member name="P:Cloo.ComputeKernel.FunctionName">
+        <member name="P:Cloo.ComputeMemory.Flags">
             <summary>
-            Gets the function name of the <see cref="T:Cloo.ComputeKernel"/>.
+            Gets the <see cref="T:Cloo.ComputeMemoryFlags"/> of the <see cref="T:Cloo.ComputeMemory"/>.
             </summary>
-            <value> The function name of the <see cref="T:Cloo.ComputeKernel"/>. </value>
+            <value> The <see cref="T:Cloo.ComputeMemoryFlags"/> of the <see cref="T:Cloo.ComputeMemory"/>. </value>
         </member>
-        <member name="P:Cloo.ComputeKernel.Program">
+        <member name="P:Cloo.ComputeMemory.Size">
             <summary>
-            Gets the <see cref="T:Cloo.ComputeProgram"/> that the <see cref="T:Cloo.ComputeKernel"/> belongs to.
+            Gets or sets (protected) the size in bytes of the <see cref="T:Cloo.ComputeMemory"/>.
             </summary>
-            <value> The <see cref="T:Cloo.ComputeProgram"/> that the <see cref="T:Cloo.ComputeKernel"/> belongs to. </value>
+            <value> The size in bytes of the <see cref="T:Cloo.ComputeMemory"/>. </value>
+        </member>
+        <member name="M:Cloo.ComputeMemory.#ctor(Cloo.ComputeContext,Cloo.ComputeMemoryFlags)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="flags"></param>
+        </member>
+        <member name="M:Cloo.ComputeMemory.Dispose(System.Boolean)">
+            <summary>
+            Releases the associated OpenCL object.
+            </summary>
+            <param name="manual"> Specifies the operation mode of this method. </param>
+            <remarks> <paramref name="manual"/> must be <c>true</c> if this method is invoked directly by the application. </remarks>
+        </member>
+        <member name="T:Cloo.ComputeObject">
+            <summary>
+            Represents an OpenCL object.
+            </summary>
+            <remarks> An OpenCL object is an object that is identified by its handle in the OpenCL environment. </remarks>
+        </member>
+        <member name="M:Cloo.ComputeObject.Equals(System.Object,System.Object)">
+            <summary>
+            Checks if two <c>object</c>s are equal. These <c>object</c>s must be cast from <see cref="T:Cloo.ComputeObject"/>s.
+            </summary>
+            <param name="objA"> The first <c>object</c> to compare. </param>
+            <param name="objB"> The second <c>object</c> to compare. </param>
+            <returns> <c>true</c> if the <c>object</c>s are equal otherwise <c>false</c>. </returns>
+        </member>
+        <member name="M:Cloo.ComputeObject.Equals(System.Object)">
+            <summary>
+            Checks if the <see cref="T:Cloo.ComputeObject"/> is equal to a specified <see cref="T:Cloo.ComputeObject"/> cast to an <c>object</c>.
+            </summary>
+            <param name="obj"> The specified <c>object</c> to compare the <see cref="T:Cloo.ComputeObject"/> with. </param>
+            <returns> <c>true</c> if the <see cref="T:Cloo.ComputeObject"/> is equal with <paramref name="obj"/> otherwise <c>false</c>. </returns>
+        </member>
+        <member name="M:Cloo.ComputeObject.Equals(Cloo.ComputeObject)">
+            <summary>
+            Checks if the <see cref="T:Cloo.ComputeObject"/> is equal to a specified <see cref="T:Cloo.ComputeObject"/>.
+            </summary>
+            <param name="obj"> The specified <see cref="T:Cloo.ComputeObject"/> to compare the <see cref="T:Cloo.ComputeObject"/> with. </param>
+            <returns> <c>true</c> if the <see cref="T:Cloo.ComputeObject"/> is equal with <paramref name="obj"/> otherwise <c>false</c>. </returns>
+        </member>
+        <member name="M:Cloo.ComputeObject.GetHashCode">
+            <summary>
+            Gets the hash code of the <see cref="T:Cloo.ComputeObject"/>.
+            </summary>
+            <returns> The hash code of the <see cref="T:Cloo.ComputeObject"/>. </returns>
+        </member>
+        <member name="M:Cloo.ComputeObject.ToString">
+            <summary>
+            Gets the string representation of the <see cref="T:Cloo.ComputeObject"/>.
+            </summary>
+            <returns> The string representation of the <see cref="T:Cloo.ComputeObject"/>. </returns>
+        </member>
+        <member name="M:Cloo.ComputeObject.GetArrayInfo``3(``0,``1,Cloo.ComputeObject.GetInfoDelegate{``0,``1})">
+            <summary>
+            
+            </summary>
+            <typeparam name="HandleType"></typeparam>
+            <typeparam name="InfoType"></typeparam>
+            <typeparam name="QueriedType"></typeparam>
+            <param name="handle"></param>
+            <param name="paramName"></param>
+            <param name="getInfoDelegate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cloo.ComputeObject.GetArrayInfo``4(``0,``1,``2,Cloo.ComputeObject.GetInfoDelegateEx{``0,``1,``2})">
+            <summary>
+            
+            </summary>
+            <typeparam name="MainHandleType"></typeparam>
+            <typeparam name="SecondHandleType"></typeparam>
+            <typeparam name="InfoType"></typeparam>
+            <typeparam name="QueriedType"></typeparam>
+            <param name="mainHandle"></param>
+            <param name="secondHandle"></param>
+            <param name="paramName"></param>
+            <param name="getInfoDelegate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cloo.ComputeObject.GetBoolInfo``2(``0,``1,Cloo.ComputeObject.GetInfoDelegate{``0,``1})">
+            <summary>
+            
+            </summary>
+            <typeparam name="HandleType"></typeparam>
+            <typeparam name="InfoType"></typeparam>
+            <param name="handle"></param>
+            <param name="paramName"></param>
+            <param name="getInfoDelegate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cloo.ComputeObject.GetInfo``3(``0,``1,Cloo.ComputeObject.GetInfoDelegate{``0,``1})">
+            <summary>
+            
+            </summary>
+            <typeparam name="HandleType"></typeparam>
+            <typeparam name="InfoType"></typeparam>
+            <typeparam name="QueriedType"></typeparam>
+            <param name="handle"></param>
+            <param name="paramName"></param>
+            <param name="getInfoDelegate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cloo.ComputeObject.GetInfo``4(``0,``1,``2,Cloo.ComputeObject.GetInfoDelegateEx{``0,``1,``2})">
+            <summary>
+            
+            </summary>
+            <typeparam name="MainHandleType"></typeparam>
+            <typeparam name="SecondHandleType"></typeparam>
+            <typeparam name="InfoType"></typeparam>
+            <typeparam name="QueriedType"></typeparam>
+            <param name="mainHandle"></param>
+            <param name="secondHandle"></param>
+            <param name="paramName"></param>
+            <param name="getInfoDelegate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cloo.ComputeObject.GetStringInfo``2(``0,``1,Cloo.ComputeObject.GetInfoDelegate{``0,``1})">
+            <summary>
+            
+            </summary>
+            <typeparam name="HandleType"></typeparam>
+            <typeparam name="InfoType"></typeparam>
+            <param name="handle"></param>
+            <param name="paramName"></param>
+            <param name="getInfoDelegate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cloo.ComputeObject.GetStringInfo``3(``0,``1,``2,Cloo.ComputeObject.GetInfoDelegateEx{``0,``1,``2})">
+            <summary>
+            
+            </summary>
+            <typeparam name="MainHandleType"></typeparam>
+            <typeparam name="SecondHandleType"></typeparam>
+            <typeparam name="InfoType"></typeparam>
+            <param name="mainHandle"></param>
+            <param name="secondHandle"></param>
+            <param name="paramName"></param>
+            <param name="getInfoDelegate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cloo.ComputeObject.SetID(System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:Cloo.ComputeObject.GetInfoDelegate`2">
+            <summary>
+            
+            </summary>
+            <typeparam name="HandleType"></typeparam>
+            <typeparam name="InfoType"></typeparam>
+            <param name="objectHandle"></param>
+            <param name="paramName"></param>
+            <param name="paramValueSize"></param>
+            <param name="paramValue"></param>
+            <param name="paramValueSizeRet"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Cloo.ComputeObject.GetInfoDelegateEx`3">
+            <summary>
+            
+            </summary>
+            <typeparam name="MainHandleType"></typeparam>
+            <typeparam name="SecondHandleType"></typeparam>
+            <typeparam name="InfoType"></typeparam>
+            <param name="mainObjectHandle"></param>
+            <param name="secondaryObjectHandle"></param>
+            <param name="paramName"></param>
+            <param name="paramValueSize"></param>
+            <param name="paramValue"></param>
+            <param name="paramValueSizeRet"></param>
+            <returns></returns>
         </member>
         <member name="T:Cloo.ComputePlatform">
             <summary>
@@ -3048,34 +3024,6 @@
             <seealso cref="T:Cloo.ComputeDevice"/>
             <seealso cref="T:Cloo.ComputeKernel"/>
             <seealso cref="T:Cloo.ComputeResource"/>
-        </member>
-        <member name="M:Cloo.ComputePlatform.GetByHandle(System.IntPtr)">
-            <summary>
-            Gets a <see cref="T:Cloo.ComputePlatform"/> of a specified handle.
-            </summary>
-            <param name="handle"> The handle of the queried <see cref="T:Cloo.ComputePlatform"/>. </param>
-            <returns> The <see cref="T:Cloo.ComputePlatform"/> of the matching handle or <c>null</c> if none matches. </returns>
-        </member>
-        <member name="M:Cloo.ComputePlatform.GetByName(System.String)">
-            <summary>
-            Gets the first matching <see cref="T:Cloo.ComputePlatform"/> of a specified name.
-            </summary>
-            <param name="platformName"> The name of the queried <see cref="T:Cloo.ComputePlatform"/>. </param>
-            <returns> The first <see cref="T:Cloo.ComputePlatform"/> of the specified name or <c>null</c> if none matches. </returns>
-        </member>
-        <member name="M:Cloo.ComputePlatform.GetByVendor(System.String)">
-            <summary>
-            Gets the first matching <see cref="T:Cloo.ComputePlatform"/> of a specified vendor.
-            </summary>
-            <param name="platformVendor"> The vendor of the queried <see cref="T:Cloo.ComputePlatform"/>. </param>
-            <returns> The first <see cref="T:Cloo.ComputePlatform"/> of the specified vendor or <c>null</c> if none matches. </returns>
-        </member>
-        <member name="M:Cloo.ComputePlatform.QueryDevices">
-            <summary>
-            Gets a read-only collection of available <see cref="T:Cloo.ComputeDevice"/>s on the <see cref="T:Cloo.ComputePlatform"/>.
-            </summary>
-            <returns> A read-only collection of the available <see cref="T:Cloo.ComputeDevice"/>s on the <see cref="T:Cloo.ComputePlatform"/>. </returns>
-            <remarks> This method resets the <c>ComputePlatform.Devices</c>. This is useful if one or more of them become unavailable (<c>ComputeDevice.Available</c> is <c>false</c>) after a <see cref="T:Cloo.ComputeContext"/> and <see cref="T:Cloo.ComputeCommandQueue"/>s that use the <see cref="T:Cloo.ComputeDevice"/> have been created and commands have been queued to them. Further calls will trigger an <c>OutOfResourcesComputeException</c> until this method is executed. You will also need to recreate any <see cref="T:Cloo.ComputeResource"/> that was created on the no longer available <see cref="T:Cloo.ComputeDevice"/>. </remarks>
         </member>
         <member name="P:Cloo.ComputePlatform.Handle">
             <summary>
@@ -3125,12 +3073,77 @@
             </summary>
             <value> The OpenCL version string supported by the <see cref="T:Cloo.ComputePlatform"/>. It has the following format: <c>OpenCL[space][major_version].[minor_version][space][vendor-specific information]</c>. </value>
         </member>
+        <member name="M:Cloo.ComputePlatform.GetByHandle(System.IntPtr)">
+            <summary>
+            Gets a <see cref="T:Cloo.ComputePlatform"/> of a specified handle.
+            </summary>
+            <param name="handle"> The handle of the queried <see cref="T:Cloo.ComputePlatform"/>. </param>
+            <returns> The <see cref="T:Cloo.ComputePlatform"/> of the matching handle or <c>null</c> if none matches. </returns>
+        </member>
+        <member name="M:Cloo.ComputePlatform.GetByName(System.String)">
+            <summary>
+            Gets the first matching <see cref="T:Cloo.ComputePlatform"/> of a specified name.
+            </summary>
+            <param name="platformName"> The name of the queried <see cref="T:Cloo.ComputePlatform"/>. </param>
+            <returns> The first <see cref="T:Cloo.ComputePlatform"/> of the specified name or <c>null</c> if none matches. </returns>
+        </member>
+        <member name="M:Cloo.ComputePlatform.GetByVendor(System.String)">
+            <summary>
+            Gets the first matching <see cref="T:Cloo.ComputePlatform"/> of a specified vendor.
+            </summary>
+            <param name="platformVendor"> The vendor of the queried <see cref="T:Cloo.ComputePlatform"/>. </param>
+            <returns> The first <see cref="T:Cloo.ComputePlatform"/> of the specified vendor or <c>null</c> if none matches. </returns>
+        </member>
+        <member name="M:Cloo.ComputePlatform.QueryDevices">
+            <summary>
+            Gets a read-only collection of available <see cref="T:Cloo.ComputeDevice"/>s on the <see cref="T:Cloo.ComputePlatform"/>.
+            </summary>
+            <returns> A read-only collection of the available <see cref="T:Cloo.ComputeDevice"/>s on the <see cref="T:Cloo.ComputePlatform"/>. </returns>
+            <remarks> This method resets the <c>ComputePlatform.Devices</c>. This is useful if one or more of them become unavailable (<c>ComputeDevice.Available</c> is <c>false</c>) after a <see cref="T:Cloo.ComputeContext"/> and <see cref="T:Cloo.ComputeCommandQueue"/>s that use the <see cref="T:Cloo.ComputeDevice"/> have been created and commands have been queued to them. Further calls will trigger an <c>OutOfResourcesComputeException</c> until this method is executed. You will also need to recreate any <see cref="T:Cloo.ComputeResource"/> that was created on the no longer available <see cref="T:Cloo.ComputeDevice"/>. </remarks>
+        </member>
         <member name="T:Cloo.ComputeProgram">
             <summary>
             Represents an OpenCL program.
             </summary>
             <remarks> An OpenCL program consists of a set of kernels. Programs may also contain auxiliary functions called by the kernel functions and constant data. </remarks>
             <seealso cref="T:Cloo.ComputeKernel"/>
+        </member>
+        <member name="P:Cloo.ComputeProgram.Handle">
+            <summary>
+            The handle of the <see cref="T:Cloo.ComputeProgram"/>.
+            </summary>
+        </member>
+        <member name="P:Cloo.ComputeProgram.Binaries">
+            <summary>
+            Gets a read-only collection of program binaries associated with the <see cref="P:Cloo.ComputeProgram.Devices"/>.
+            </summary>
+            <value> A read-only collection of program binaries associated with the <see cref="P:Cloo.ComputeProgram.Devices"/>. </value>
+            <remarks> The bits returned can be an implementation-specific intermediate representation (a.k.a. IR) or device specific executable bits or both. The decision on which information is returned in the binary is up to the OpenCL implementation. </remarks>
+        </member>
+        <member name="P:Cloo.ComputeProgram.BuildOptions">
+            <summary>
+            Gets the <see cref="T:Cloo.ComputeProgram"/> build options as specified in <paramref name="options"/> argument of <see cref="M:Cloo.ComputeProgram.Build(System.Collections.Generic.ICollection{Cloo.ComputeDevice},System.String,Cloo.Bindings.ComputeProgramBuildNotifier,System.IntPtr)"/>.
+            </summary>
+            <value> The <see cref="T:Cloo.ComputeProgram"/> build options as specified in <paramref name="options"/> argument of <see cref="M:Cloo.ComputeProgram.Build(System.Collections.Generic.ICollection{Cloo.ComputeDevice},System.String,Cloo.Bindings.ComputeProgramBuildNotifier,System.IntPtr)"/>. </value>
+        </member>
+        <member name="P:Cloo.ComputeProgram.Context">
+            <summary>
+            Gets the <see cref="T:Cloo.ComputeContext"/> of the <see cref="T:Cloo.ComputeProgram"/>.
+            </summary>
+            <value> The <see cref="T:Cloo.ComputeContext"/> of the <see cref="T:Cloo.ComputeProgram"/>. </value>
+        </member>
+        <member name="P:Cloo.ComputeProgram.Devices">
+            <summary>
+            Gets a read-only collection of <see cref="T:Cloo.ComputeDevice"/>s associated with the <see cref="T:Cloo.ComputeProgram"/>.
+            </summary>
+            <value> A read-only collection of <see cref="T:Cloo.ComputeDevice"/>s associated with the <see cref="T:Cloo.ComputeProgram"/>. </value>
+            <remarks> This collection is a subset of <see cref="!:ComputeProgram.Context.Devices"/>. </remarks>
+        </member>
+        <member name="P:Cloo.ComputeProgram.Source">
+            <summary>
+            Gets a read-only collection of program source code strings specified when creating the <see cref="T:Cloo.ComputeProgram"/> or <c>null</c> if <see cref="T:Cloo.ComputeProgram"/> was created using program binaries.
+            </summary>
+            <value> A read-only collection of program source code strings specified when creating the <see cref="T:Cloo.ComputeProgram"/> or <c>null</c> if <see cref="T:Cloo.ComputeProgram"/> was created using program binaries. </value>
         </member>
         <member name="M:Cloo.ComputeProgram.#ctor(Cloo.ComputeContext,System.String)">
             <summary>
@@ -3199,42 +3212,29 @@
             <param name="manual"> Specifies the operation mode of this method. </param>
             <remarks> <paramref name="manual"/> must be <c>true</c> if this method is invoked directly by the application. </remarks>
         </member>
-        <member name="P:Cloo.ComputeProgram.Handle">
+        <member name="T:Cloo.ComputeResource">
             <summary>
-            The handle of the <see cref="T:Cloo.ComputeProgram"/>.
+            Represents an OpenCL resource.
+            </summary>
+            <remarks> An OpenCL resource is an OpenCL object that can be created and deleted by the application. </remarks>
+            <seealso cref="T:Cloo.ComputeObject"/>
+        </member>
+        <member name="M:Cloo.ComputeResource.Dispose">
+            <summary>
+            Deletes the <see cref="T:Cloo.ComputeResource"/> and frees its accompanying OpenCL resources.
             </summary>
         </member>
-        <member name="P:Cloo.ComputeProgram.Binaries">
+        <member name="M:Cloo.ComputeResource.Dispose(System.Boolean)">
             <summary>
-            Gets a read-only collection of program binaries associated with the <see cref="P:Cloo.ComputeProgram.Devices"/>.
+            Releases the associated OpenCL object.
             </summary>
-            <value> A read-only collection of program binaries associated with the <see cref="P:Cloo.ComputeProgram.Devices"/>. </value>
-            <remarks> The bits returned can be an implementation-specific intermediate representation (a.k.a. IR) or device specific executable bits or both. The decision on which information is returned in the binary is up to the OpenCL implementation. </remarks>
+            <param name="manual"> Specifies the operation mode of this method. </param>
+            <remarks> <paramref name="manual"/> must be <c>true</c> if this method is invoked directly by the application. </remarks>
         </member>
-        <member name="P:Cloo.ComputeProgram.BuildOptions">
+        <member name="M:Cloo.ComputeResource.Finalize">
             <summary>
-            Gets the <see cref="T:Cloo.ComputeProgram"/> build options as specified in <paramref name="options"/> argument of <see cref="M:Cloo.ComputeProgram.Build(System.Collections.Generic.ICollection{Cloo.ComputeDevice},System.String,Cloo.Bindings.ComputeProgramBuildNotifier,System.IntPtr)"/>.
+            Releases the associated OpenCL object.
             </summary>
-            <value> The <see cref="T:Cloo.ComputeProgram"/> build options as specified in <paramref name="options"/> argument of <see cref="M:Cloo.ComputeProgram.Build(System.Collections.Generic.ICollection{Cloo.ComputeDevice},System.String,Cloo.Bindings.ComputeProgramBuildNotifier,System.IntPtr)"/>. </value>
-        </member>
-        <member name="P:Cloo.ComputeProgram.Context">
-            <summary>
-            Gets the <see cref="T:Cloo.ComputeContext"/> of the <see cref="T:Cloo.ComputeProgram"/>.
-            </summary>
-            <value> The <see cref="T:Cloo.ComputeContext"/> of the <see cref="T:Cloo.ComputeProgram"/>. </value>
-        </member>
-        <member name="P:Cloo.ComputeProgram.Devices">
-            <summary>
-            Gets a read-only collection of <see cref="T:Cloo.ComputeDevice"/>s associated with the <see cref="T:Cloo.ComputeProgram"/>.
-            </summary>
-            <value> A read-only collection of <see cref="T:Cloo.ComputeDevice"/>s associated with the <see cref="T:Cloo.ComputeProgram"/>. </value>
-            <remarks> This collection is a subset of <see cref="!:ComputeProgram.Context.Devices"/>. </remarks>
-        </member>
-        <member name="P:Cloo.ComputeProgram.Source">
-            <summary>
-            Gets a read-only collection of program source code strings specified when creating the <see cref="T:Cloo.ComputeProgram"/> or <c>null</c> if <see cref="T:Cloo.ComputeProgram"/> was created using program binaries.
-            </summary>
-            <value> A read-only collection of program source code strings specified when creating the <see cref="T:Cloo.ComputeProgram"/> or <c>null</c> if <see cref="T:Cloo.ComputeProgram"/> was created using program binaries. </value>
         </member>
         <member name="T:Cloo.ComputeSampler">
             <summary>
@@ -3242,22 +3242,6 @@
             </summary>
             <remarks> An object that describes how to sample an image when the image is read in the kernel. The image read functions take a sampler as an argument. The sampler specifies the image addressing-mode i.e. how out-of-range image coordinates are handled, the filtering mode, and whether the input image coordinate is a normalized or unnormalized value. </remarks>
             <seealso cref="T:Cloo.ComputeImage"/>
-        </member>
-        <member name="M:Cloo.ComputeSampler.#ctor(Cloo.ComputeContext,System.Boolean,Cloo.ComputeImageAddressing,Cloo.ComputeImageFiltering)">
-            <summary>
-            Creates a new <see cref="T:Cloo.ComputeSampler"/>.
-            </summary>
-            <param name="context"> A <see cref="T:Cloo.ComputeContext"/>. </param>
-            <param name="normalizedCoords"> The usage state of normalized coordinates when accessing a <see cref="T:Cloo.ComputeImage"/> in a <see cref="T:Cloo.ComputeKernel"/>. </param>
-            <param name="addressing"> The <see cref="T:Cloo.ComputeImageAddressing"/> mode of the <see cref="T:Cloo.ComputeSampler"/>. Specifies how out-of-range image coordinates are handled while reading. </param>
-            <param name="filtering"> The <see cref="T:Cloo.ComputeImageFiltering"/> mode of the <see cref="T:Cloo.ComputeSampler"/>. Specifies the type of filter that must be applied when reading data from an image. </param>
-        </member>
-        <member name="M:Cloo.ComputeSampler.Dispose(System.Boolean)">
-            <summary>
-            Releases the associated OpenCL object.
-            </summary>
-            <param name="manual"> Specifies the operation mode of this method. </param>
-            <remarks> <paramref name="manual"/> must be <c>true</c> if this method is invoked directly by the application. </remarks>
         </member>
         <member name="P:Cloo.ComputeSampler.Handle">
             <summary>
@@ -3287,6 +3271,22 @@
             Gets the state of usage of normalized x, y and z coordinates when accessing a <see cref="T:Cloo.ComputeImage"/> in a <see cref="T:Cloo.ComputeKernel"/> through the <see cref="T:Cloo.ComputeSampler"/>.
             </summary>
             <value> The state of usage of normalized x, y and z coordinates when accessing a <see cref="T:Cloo.ComputeImage"/> in a <see cref="T:Cloo.ComputeKernel"/> through the <see cref="T:Cloo.ComputeSampler"/>. </value>
+        </member>
+        <member name="M:Cloo.ComputeSampler.#ctor(Cloo.ComputeContext,System.Boolean,Cloo.ComputeImageAddressing,Cloo.ComputeImageFiltering)">
+            <summary>
+            Creates a new <see cref="T:Cloo.ComputeSampler"/>.
+            </summary>
+            <param name="context"> A <see cref="T:Cloo.ComputeContext"/>. </param>
+            <param name="normalizedCoords"> The usage state of normalized coordinates when accessing a <see cref="T:Cloo.ComputeImage"/> in a <see cref="T:Cloo.ComputeKernel"/>. </param>
+            <param name="addressing"> The <see cref="T:Cloo.ComputeImageAddressing"/> mode of the <see cref="T:Cloo.ComputeSampler"/>. Specifies how out-of-range image coordinates are handled while reading. </param>
+            <param name="filtering"> The <see cref="T:Cloo.ComputeImageFiltering"/> mode of the <see cref="T:Cloo.ComputeSampler"/>. Specifies the type of filter that must be applied when reading data from an image. </param>
+        </member>
+        <member name="M:Cloo.ComputeSampler.Dispose(System.Boolean)">
+            <summary>
+            Releases the associated OpenCL object.
+            </summary>
+            <param name="manual"> Specifies the operation mode of this method. </param>
+            <remarks> <paramref name="manual"/> must be <c>true</c> if this method is invoked directly by the application. </remarks>
         </member>
         <member name="T:Cloo.ComputeSubBuffer`1">
             <summary>
