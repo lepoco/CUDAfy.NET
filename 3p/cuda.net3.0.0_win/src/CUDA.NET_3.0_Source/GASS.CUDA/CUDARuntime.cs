@@ -22,19 +22,9 @@ namespace GASS.CUDA
         [DllImport(DLL_NAME)]
         public static extern cudaError cudaGetDeviceProperties(ref cudaDeviceProp prop, int device);
 
-        [DllImport(DLL_NAME_PREV, EntryPoint = "cudaGetDeviceProperties")]
-        public static extern cudaError cudaGetDevicePropertiesPrev(ref cudaDeviceProp prop, int device);
-
         public cudaError GetDeviceProperties(ref cudaDeviceProp prop, int device)
         {
-            try
-            {
-                return cudaGetDeviceProperties(ref prop, device);
-            }
-            catch (DllNotFoundException)
-            {
-                return cudaGetDevicePropertiesPrev(ref prop, device);
-            }
+            return cudaGetDeviceProperties(ref prop, device);
         }
     }
 
@@ -50,19 +40,9 @@ namespace GASS.CUDA
         [DllImport(DLL_NAME)]
         public static extern cudaError cudaGetDeviceProperties(ref cudaDeviceProp prop, int device);
 
-        [DllImport(DLL_NAME_PREV, EntryPoint = "cudaGetDeviceProperties")]
-        public static extern cudaError cudaGetDevicePropertiesPrev(ref cudaDeviceProp prop, int device);
-
         public cudaError GetDeviceProperties(ref cudaDeviceProp prop, int device)
         {
-            try
-            {
-                return cudaGetDeviceProperties(ref prop, device);
-            }
-            catch (DllNotFoundException)
-            {
-                return cudaGetDevicePropertiesPrev(ref prop, device);
-            }
+            return cudaGetDeviceProperties(ref prop, device);
         }
     }
 
