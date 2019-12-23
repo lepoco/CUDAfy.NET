@@ -46,7 +46,7 @@ namespace Cudafy
             AdditionalOutputArgs = "";
             TimeOut = 20000;
             Platform = ePlatform.Auto;
-            Architecture = eArchitecture.sm_20;
+            Architecture = eArchitecture.sm_30;
             CompileMode = eCudafyCompileMode.Default;
             InputFile = "CUDAFYSOURCETEMP.cu";
 
@@ -173,7 +173,7 @@ namespace Cudafy
             return (((uint)arch & (uint)32768) == (uint)32768) ? eGPUType.OpenCL : eGPUType.Cuda;
         }
 
-        public static CompileProperties Create(ePlatform platform = ePlatform.Auto, eArchitecture arch = eArchitecture.sm_20, eCudafyCompileMode mode = eCudafyCompileMode.Default, string workingDir = null, bool debugInfo = false)
+        public static CompileProperties Create(ePlatform platform = ePlatform.Auto, eArchitecture arch = eArchitecture.sm_30, eCudafyCompileMode mode = eCudafyCompileMode.Default, string workingDir = null, bool debugInfo = false)
         {
             CompileProperties tp = new CompileProperties();
             eLanguage language = GetLanguage(arch);
@@ -185,7 +185,7 @@ namespace Cudafy
                 tp.IncludeDirectoryPath = NvccExe.getIncludePath();
                 tp.PathEnvVarExtraEntries = new string[ 1 ] { NvccExe.getClExeDirectory() };
 
-                tp.Architecture = (arch == eArchitecture.Unknown) ? eArchitecture.sm_20 : arch;
+                tp.Architecture = (arch == eArchitecture.Unknown) ? eArchitecture.sm_30 : arch;
                 bool binary = ((mode & eCudafyCompileMode.Binary) == eCudafyCompileMode.Binary);
                 string tempFileName = "CUDAFYSOURCETEMP.tmp";
                 string cuFileName = tempFileName.Replace(".tmp", ".cu");
@@ -232,7 +232,7 @@ namespace Cudafy
 
             TimeOut = 20000;
             Platform = ePlatform.Auto;
-            Architecture = eArchitecture.sm_20;
+            Architecture = eArchitecture.sm_30;
 
             InputFile = "";
         }

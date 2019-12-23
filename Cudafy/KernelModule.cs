@@ -1351,6 +1351,7 @@ namespace Cudafy
                         process.StartInfo.UseShellExecute = false;
                         process.StartInfo.RedirectStandardOutput = true;
                         process.StartInfo.RedirectStandardError = true;
+                        process.StartInfo.EnvironmentVariables["PATH"] += ";" + string.Join(";", p.PathEnvVarExtraEntries);
                         process.StartInfo.CreateNoWindow = SuppressWindow;//WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
                         process.StartInfo.FileName = string.Format(@"""{0}""", p.CompilerPath);
                         process.StartInfo.Arguments = p.GetCommandString();

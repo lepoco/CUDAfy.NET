@@ -102,7 +102,7 @@ namespace Cudafy.Compilers
         /// <returns></returns>
         public static NvccCompilerOptions Create()
         {
-            NvccCompilerOptions opt = Createx86(null, eArchitecture.sm_20);
+            NvccCompilerOptions opt = Createx86(null, eArchitecture.sm_30);
             opt.CanEdit = true;
             return opt;
         }
@@ -113,7 +113,7 @@ namespace Cudafy.Compilers
         /// <returns></returns>
         public static NvccCompilerOptions Createx86()
         {
-            return Createx86(null, eArchitecture.sm_20);
+            return Createx86(null, eArchitecture.sm_30);
         }
 
         private static void AddArchOptions(CompilerOptions co, eArchitecture arch)
@@ -193,7 +193,7 @@ namespace Cudafy.Compilers
         /// <returns></returns>
         public static NvccCompilerOptions Createx64()
         {
-            return Createx64(null, eArchitecture.sm_20);
+            return Createx64(null, eArchitecture.sm_30);
         }
 
         /// <summary>
