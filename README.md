@@ -35,7 +35,7 @@ You can download the latest CUDA version from the official NVIDIA website
 
 ## ATTENTION
 Cudafy.NET is created by [HYBRIDDSP](http://hybriddsp.com/products/cudafynet/) under LGPL v2.1 License.
-I only used sources on the Internet and searched the files to adapt them to the latest version of CUDA 10.1
+I only used sources on the Internet and searched the files to adapt them to the latest version of CUDA 10.2 and .NET Framework 4.8
 
 I am not the creator of this library, but only a fan who wants to help in using CUDA in newer versions.
 
