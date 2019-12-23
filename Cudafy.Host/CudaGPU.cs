@@ -4,17 +4,14 @@ Please consider purchasing a commerical license - it helps development, frees yo
 and provides you with support.  Thank you!
 Copyright (C) 2011 Hybrid DSP Systems
 http://www.hybriddsp.com
-
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
 License as published by the Free Software Foundation; either
 version 2.1 of the License, or (at your option) any later version.
-
 This library is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 Lesser General Public License for more details.
-
 You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
@@ -47,7 +44,7 @@ namespace Cudafy.Host
         public ulong p2pToken;
         public uint vaSpaceToken;
     };
-    
+
     /// <summary>
     /// Represents a Cuda GPU.
     /// </summary>
@@ -122,7 +119,7 @@ namespace Cudafy.Host
         /// </returns>
         public override bool CanAccessPeer(GPGPU peer)
         {
-            if(!(peer is CudaGPU))
+            if (!(peer is CudaGPU))
                 return false;
             CUDA dstCUDA = (CUDA)(peer as CudaGPU).CudaDotNet;
             CUdevice srcDevice = _cuda.GetDevice(this.DeviceId);
@@ -168,7 +165,7 @@ namespace Cudafy.Host
             return DoGetPointerP2PTokens<T>(data);
         }
 
-        public Peer2PeerTokens GetPointerP2PTokens<T>(T[, ,] data)
+        public Peer2PeerTokens GetPointerP2PTokens<T>(T[,,] data)
         {
             return DoGetPointerP2PTokens<T>(data);
         }
@@ -246,7 +243,7 @@ namespace Cudafy.Host
                 //Debug.WriteLine("Locking");
                 //var curCtx = _cuda.GetCurrentContext();
                 //if (curCtx.Pointer != IntPtr.Zero && _cuda.DeviceContext.Pointer != curCtx.Pointer)
-                    _ccs.Lock();
+                _ccs.Lock();
             }
             catch (CUDAException ex)
             {
@@ -266,7 +263,7 @@ namespace Cudafy.Host
             {
                 //Debug.WriteLine("Unlocking");
                 //if(_ccs.IsLocked)
-                    _ccs.Unlock();
+                _ccs.Unlock();
             }
             catch (CUDAException ex)
             {
@@ -394,7 +391,7 @@ namespace Cudafy.Host
         public override GPGPUProperties GetDeviceProperties(bool useAdvanced = true)
         {
             Device dev = _cuda.Devices[DeviceId];//CurrentDevice;
-            
+
             GPGPUProperties props = new GPGPUProperties();
             props.UseAdvanced = useAdvanced;
             props.Capability = dev.ComputeCapability;
@@ -414,7 +411,7 @@ namespace Cudafy.Host
             props.TotalConstantMemory = dp.TotalConstantMemory;
             props.TextureAlignment = dp.TextureAlign;
             props.MultiProcessorCount = 0;
-            
+
             if (useAdvanced)
             {
                 cudaDeviceProp devProps = new cudaDeviceProp();
@@ -441,7 +438,7 @@ namespace Cudafy.Host
 #else
                         props.HighPerformanceDriver = devProps.tccDriver == 1;
 #endif
-                        
+
                     }
                     else
                         throw new CudafyHostException(CudafyHostException.csFAILED_TO_GET_PROPERIES_X, rc);
@@ -482,77 +479,22 @@ namespace Cudafy.Host
             string addInfo = string.Empty;
             switch (ex.CUDAError)
             {
-                case CUResult.ECCUncorrectable:
+                case CUResult.ErrorInvalidPtx:
+                    addInfo = "Ensure that latest Display Driver version is installed";
                     break;
-                case CUResult.ErrorAlreadyAcquired:
-                    break;
-                case CUResult.ErrorAlreadyMapped:
-                    break;
-                case CUResult.ErrorArrayIsMapped:
-                    break;
-                case CUResult.ErrorContextAlreadyCurrent:
-                    break;
-                case CUResult.ErrorDeinitialized:
-                    break;
-                case CUResult.ErrorFileNotFound:
-                    break;
-                case CUResult.ErrorInvalidContext:
-                    break;
-                case CUResult.ErrorInvalidDevice:
-                    break;
-                case CUResult.ErrorInvalidHandle:
-                    break;
-                case CUResult.ErrorInvalidImage:
-                    break;
-                case CUResult.ErrorInvalidSource:
-                    break;
-                case CUResult.ErrorInvalidValue:
-                    break;
-                case CUResult.ErrorLaunchFailed:
-                    break;
-                case CUResult.ErrorLaunchIncompatibleTexturing:
-                    break;
-                case CUResult.ErrorLaunchOutOfResources:
-                    break;
-                case CUResult.ErrorLaunchTimeout:
-                    break;
-                case CUResult.ErrorMapFailed:
-                    break;
-                case CUResult.ErrorNoBinaryForGPU:
-                    addInfo = "Ensure that compiled architecture version is suitable for device"; 
-                    break;
-                case CUResult.ErrorNoDevice:
-                    break;
-                case CUResult.ErrorNotFound:
+                case CUResult.ErrorNoBinaryForGpu:
+                    addInfo = "Ensure that compiled architecture version is suitable for device";
                     break;
                 case CUResult.ErrorNotInitialized:
                     addInfo = "Ensure that suitable GPU and CUDA is correctly installed. If newly installed then reboot may be necessary.";
                     break;
-                case CUResult.ErrorNotMapped:
-                    break;
-                case CUResult.ErrorNotReady:
-                    break;
                 case CUResult.ErrorOutOfMemory:
-                    addInfo = "Ensure that memory on GPU is being explicitly released with Free()"; 
-                    break;
-                case CUResult.ErrorUnknown:
-                    break;
-                case CUResult.ErrorUnmapFailed:
-                    break;
-                case CUResult.NotMappedAsArray:
-                    break;
-                case CUResult.NotMappedAsPointer:
-                    break;
-                case CUResult.PointerIs64Bit:
-                    break;
-                case CUResult.SizeIs64Bit:
-                    break;
-                case CUResult.Success:
+                    addInfo = "Ensure that memory on GPU is being explicitly released with Free()";
                     break;
                 default:
                     break;
             }
-            if(string.IsNullOrEmpty(addInfo))
+            if (string.IsNullOrEmpty(addInfo))
                 throw new CudafyHostException(CudafyHostException.csCUDA_EXCEPTION_X, ex.CUDAError.ToString());
             else
                 throw new CudafyHostException(CudafyHostException.csCUDA_EXCEPTION_X_X, ex.CUDAError.ToString(), addInfo);
@@ -603,11 +545,11 @@ namespace Cudafy.Host
         /// <value>The free memory.</value>
         public override ulong FreeMemory
         {
-            get 
+            get
             {
                 if (!IsCurrentContext)
                     return 0;
-                return _cuda.FreeMemory; 
+                return _cuda.FreeMemory;
             }
         }
 
@@ -619,11 +561,11 @@ namespace Cudafy.Host
         /// </value>
         public override ulong TotalMemory
         {
-            get 
+            get
             {
                 if (!IsCurrentContext)
                     return 0;
-                return _cuda.TotalMemory; 
+                return _cuda.TotalMemory;
             }
         }
 
@@ -681,15 +623,15 @@ namespace Cudafy.Host
             }
 
 #warning TODO Set Shared memory size
-            
+
             int ptrSize = CUdeviceptr.Size;
-                
+
             CUfunction function = _cuda.GetModuleFunction((CUmodule)_module.Tag, gpuMethodInfo.Method.Name);
             _cuda.SetFunctionBlockShape(function, blockSize.x, blockSize.y, blockSize.z);
             int offset = 0;
             foreach (object o in arguments)
             {
-                Type type = o.GetType();                
+                Type type = o.GetType();
                 if (o is GThread)
                 {
                     throw new CudafyFatalException("GThread should not be passed to launch!");
@@ -727,7 +669,7 @@ namespace Cudafy.Host
                         _cuda.SetParameter(function, offset, o);
                         offset += size;
                     }
-                    else if(type == typeof(char))
+                    else if (type == typeof(char))
                     {
                         offset = AlignUp(offset, 2);
                         byte[] ba = Encoding.Unicode.GetBytes(new char[] { (char)o });
@@ -779,7 +721,7 @@ namespace Cudafy.Host
             try
             {
                 _cuda.SetParameterSize(function, (uint)(offset));
-                if(streamId < 0)
+                if (streamId < 0)
                     _cuda.Launch(function, gridSize.x, gridSize.y);
                 else
                 {
@@ -790,7 +732,7 @@ namespace Cudafy.Host
                         cuStr = _cuda.CreateStream();
                         _streams.Add(streamId, cuStr);
                     }
-                    else if(streamId > 0)
+                    else if (streamId > 0)
                         cuStr = (CUstream)_streams[streamId];
                     _cuda.LaunchAsync(function, gridSize.x, gridSize.y, cuStr);
                 }
@@ -893,7 +835,7 @@ namespace Cudafy.Host
 
         #endregion
 
-        protected override Array DoCast<T,U>(int offset, Array devArray, int n)
+        protected override Array DoCast<T, U>(int offset, Array devArray, int n)
         {
             U[] devMem = new U[0];
             CUDevicePtrEx devPtrEx = (CUDevicePtrEx)GetDeviceMemory(devArray);
@@ -902,7 +844,7 @@ namespace Cudafy.Host
             return devMem;
         }
 
-        protected override Array DoCast<T,U>(int offset, Array devArray, int x, int y)
+        protected override Array DoCast<T, U>(int offset, Array devArray, int x, int y)
         {
             U[,] devMem = new U[0, 0];
             CUDevicePtrEx devPtrEx = (CUDevicePtrEx)GetDeviceMemory(devArray);
@@ -911,9 +853,9 @@ namespace Cudafy.Host
             return devMem;
         }
 
-        protected override Array DoCast<T,U>(int offset, Array devArray, int x, int y, int z)
+        protected override Array DoCast<T, U>(int offset, Array devArray, int x, int y, int z)
         {
-            U[, ,] devMem = new U[0, 0, 0];
+            U[,,] devMem = new U[0, 0, 0];
             CUDevicePtrEx devPtrEx = (CUDevicePtrEx)GetDeviceMemory(devArray);
             CUDevicePtrEx newDevPtrEx = devPtrEx.Cast<U>(devPtrEx, offset, x, y, z);
             AddToDeviceMemory(devMem, newDevPtrEx);
@@ -946,12 +888,12 @@ namespace Cudafy.Host
             {
                 GCHandle handle = GCHandle.Alloc(hostArray, GCHandleType.Pinned);
                 try
-                {                 
+                {
                     int size = MSizeOf(typeof(T));
                     IntPtr hostPtr = handle.AddrOfPinnedObject();
                     IntPtr hostOffsetPtr = new IntPtr(hostPtr.ToInt64() + hostOffset * size);
                     CUdeviceptr devOffsetPtr = devPtr + (long)(devOffset * size);
-                    if(streamId > 0)
+                    if (streamId > 0)
                     {
                         CUstream stream = (CUstream)GetStream(streamId);
                         _cuda.CopyHostToDeviceAsync(devOffsetPtr, hostOffsetPtr, (uint)(count * size), stream);
@@ -1031,13 +973,17 @@ namespace Cudafy.Host
             }
 
             DoCopyOnHostM2NDelegate<T> copyM2N = new DoCopyOnHostM2NDelegate<T>(DoCopyOnHost<T>);
-            var cdp = new CopyDeviceParams<T>() { count = count, devArray = devArray, devOffset = devOffset,
-                                                  stagingPost = stagingPost,
-                                                  streamId = streamDesc,
-                                                  copyToDevice = true,
-                                                  hostArray = hostArray,
-                                                  hostOffset = hostOffset,
-                                                  IsConstantMemory = isConstantMemory
+            var cdp = new CopyDeviceParams<T>()
+            {
+                count = count,
+                devArray = devArray,
+                devOffset = devOffset,
+                stagingPost = stagingPost,
+                streamId = streamDesc,
+                copyToDevice = true,
+                hostArray = hostArray,
+                hostOffset = hostOffset,
+                IsConstantMemory = isConstantMemory
             };
             AsyncCallback callback = OnCopyOnHostCompleted<T>;
             IAsyncResult res = copyM2N.BeginInvoke(hostArray, hostOffset, stagingPost, 0, count, callback,
@@ -1052,7 +998,7 @@ namespace Cudafy.Host
             var streamDesc = new StreamDesc() { Stream = stream, StreamId = streamId };
 
             lock (_smartCopyLock)
-            {               
+            {
                 while (_streamsPending.Where(sp => sp.StreamId == streamId).Count() > 0)
                     Monitor.Wait(_smartCopyLock);
                 _streamsPending.Add(streamDesc);
@@ -1101,7 +1047,7 @@ namespace Cudafy.Host
             cuStr.Pointer = IntPtr.Zero;
             if (streamId > 0)
             {
-                if(!_streams.ContainsKey(streamId))
+                if (!_streams.ContainsKey(streamId))
                     throw new CudafyHostException(CudafyHostException.csSTREAM_X_NOT_SET, streamId);
                 cuStr = (CUstream)_streams[streamId];
             }
@@ -1137,7 +1083,7 @@ namespace Cudafy.Host
 
         private void DoCopyFromDeviceAsyncEx<T>(Array devArray, int devOffset, IntPtr hostArray, int hostOffset, int count, int streamId) where T : struct
         {
-            if(IsSmartCopyEnabled)
+            if (IsSmartCopyEnabled)
                 Lock();
             DoCopyFromDeviceAsync<T>(devArray, devOffset, hostArray, hostOffset, count, streamId);
             if (IsSmartCopyEnabled)
@@ -1167,7 +1113,7 @@ namespace Cudafy.Host
                 Debug.Assert(removed);
                 Monitor.Pulse(_smartCopyLock);
             }
-            
+
         }
 
         private void OnCopyFromDeviceAsyncCompleted<T>(IAsyncResult result)
@@ -1182,7 +1128,7 @@ namespace Cudafy.Host
             _cuda.SynchronizeStream(cdp.streamId.Stream);
             if (IsSmartCopyEnabled)
                 Unlock();
-            lock(_smartCopyLock)
+            lock (_smartCopyLock)
             {
                 DoCopyOnHost<T>(cdp.stagingPost, 0, cdp.hostArray, cdp.hostOffset, cdp.count);
                 bool removed = _streamsPending.Remove(cdp.streamId);
@@ -1307,7 +1253,7 @@ namespace Cudafy.Host
                 }
                 _streams.Add(streamId, cuStr);
             }
-            else if(streamId > 0)
+            else if (streamId > 0)
             {
                 cuStr = (CUstream)_streams[streamId];
             }
@@ -1350,7 +1296,7 @@ namespace Cudafy.Host
                 Debug.WriteLine(string.Format("Warning: DestroyStream(int streamId) streamId {0} does not exist"));
                 return;
             }
-                //throw new CudafyHostException(CudafyHostException.csSTREAM_X_NOT_SET, streamId);
+            //throw new CudafyHostException(CudafyHostException.csSTREAM_X_NOT_SET, streamId);
             CUstream cuStr = (CUstream)_streams[streamId];
             try
             {
@@ -1572,7 +1518,7 @@ namespace Cudafy.Host
         }
 
         protected override void DoCopyDeviceToDevice<T>(Array srcDevArray, int srcOffset, GPGPU peer, Array dstDevArray, int dstOffet, int count)
-        {          
+        {
             CUDevicePtrEx ptrSrcEx = (CUDevicePtrEx)GetDeviceMemory(srcDevArray);
             CUDevicePtrEx ptrDstEx = (CUDevicePtrEx)peer.GetDeviceMemory(dstDevArray);
             int size = MSizeOf(typeof(T));
@@ -1696,7 +1642,7 @@ namespace Cudafy.Host
         /// <returns>2D device array.</returns>
         public override T[,] Allocate<T>(int x, int y)
         {
-            T[,] devMem = new T[0,0];
+            T[,] devMem = new T[0, 0];
             CUdeviceptr ptr = new CUdeviceptr();
             try
             {
@@ -1758,7 +1704,7 @@ namespace Cudafy.Host
 #pragma warning disable 1591
         public override T[,] Allocate<T>(T[,] hostArray)
         {
-            T[,] devMem = new T[0,0];
+            T[,] devMem = new T[0, 0];
             CUdeviceptr ptr = new CUdeviceptr();
             try
             {
@@ -1790,7 +1736,7 @@ namespace Cudafy.Host
 
         protected override void DoSet<T>(Array devArray, int offset = 0, int count = 0)
         {
-            CUDevicePtrEx ptrEx = (CUDevicePtrEx)GetDeviceMemory(devArray); 
+            CUDevicePtrEx ptrEx = (CUDevicePtrEx)GetDeviceMemory(devArray);
             int size = MSizeOf(typeof(T));
             CUdeviceptr ptr = ptrEx.DevPtr + (long)(size * offset);
             if (count <= 0)
@@ -1828,7 +1774,7 @@ namespace Cudafy.Host
                     ptrEx.Disposed = true;
                 }
                 else
-                { 
+                {
                     Debug.WriteLine(string.Format("ptrEx.CreatedFromCast={0} && _cuda{1} && ptrEx.Disposed={2}",
                         ptrEx.CreatedFromCast, _cuda == null ? "==null" : "!=null", ptrEx.Disposed));
                 }
@@ -1838,7 +1784,7 @@ namespace Cudafy.Host
             catch (CUDAException ex)
             {
                 HandleCUDAException(ex);
-            }            
+            }
         }
 
         /// <summary>
@@ -1878,7 +1824,7 @@ namespace Cudafy.Host
                                 ptrEx.CreatedFromCast, _cuda == null ? "==null" : "!=null", ptrEx.Disposed));
                     }
                     catch (CUDAException ex)
-                    {                        
+                    {
 #if DEBUG
                         HandleCUDAException(ex);
 #endif
@@ -1898,7 +1844,7 @@ namespace Cudafy.Host
             else
                 CheckForDuplicateMembers(module);
 
-            if(!module.HasPTX && !module.HasBinary)
+            if (!module.HasPTX && !module.HasBinary)
                 throw new CudafyHostException(CudafyHostException.csNO_X_PRESENT_IN_CUDAFY_MODULE, "PTX or binary");
             PTXModule ptxModule = module.PTX;
             BinaryModule binModule = module.Binary;
@@ -1944,9 +1890,9 @@ namespace Cudafy.Host
                 throw new CudafyHostException(CudafyHostException.csMODULE_NOT_FOUND);
             if (_module == module)
                 _module = null;
-            if(module.Tag != null)
+            if (module.Tag != null)
                 _cuda.UnloadModule((CUmodule)module.Tag);
-            
+
         }
 
         /// <summary>
@@ -1959,7 +1905,7 @@ namespace Cudafy.Host
             try
             {
                 CudaGPU gpu = CudafyHost.GetDevice(eGPUType.Cuda) as CudaGPU;
-                cnt = (gpu.CudaDotNet as CUDA).GetDeviceCount();              
+                cnt = (gpu.CudaDotNet as CUDA).GetDeviceCount();
             }
             catch (Exception ex)
             {
@@ -1986,7 +1932,7 @@ namespace Cudafy.Host
             return ((CUDevicePtrEx)base.GetGPUData(data)).DevPtr;
         }
 
-        
+
         public override int GetDriverVersion()
         {
             return _cuda.GetDriverVersion();
@@ -2011,7 +1957,7 @@ namespace Cudafy.Host
         //{
         //    Context = context;
         //}
-        
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CUDevicePtrEx"/> class.
         /// </summary>
