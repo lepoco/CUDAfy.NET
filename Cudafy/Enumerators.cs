@@ -221,7 +221,7 @@ namespace Cudafy
     /// </summary>
     public enum eArchitecture : uint
     {
-                /// <summary>
+        /// <summary>
         /// Unspecified architecture.
         /// </summary>
         Unknown = 0,//0xFFFFFFFF,
@@ -281,6 +281,38 @@ namespace Cudafy
         /// CUDA sm_52
         /// </summary>
         sm_52 = 308,
+        /// <summary>
+        /// CUDA sm_53
+        /// </summary>
+        sm_53 = 309,
+        /// <summary>
+        /// CUDA sm_60
+        /// </summary>
+        sm_60 = 316,
+        /// <summary>
+        /// CUDA sm_61
+        /// </summary>
+        sm_61 = 317,
+        /// <summary>
+        /// CUDA sm_61
+        /// </summary>
+        sm_62 = 318,
+        /// <summary>
+        /// CUDA sm_70
+        /// </summary>
+        sm_70 = 326,
+        /// <summary>
+        /// CUDA sm_72
+        /// </summary>
+        sm_72 = 328,
+        /// <summary>
+        /// CUDA sm_75
+        /// </summary>
+        sm_75 = 331,
+        /// <summary>
+        /// CUDA sm_80
+        /// </summary>
+        sm_80 = 336,
         /// <summary>
         /// OpenCL 1.0
         /// </summary>
