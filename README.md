@@ -14,7 +14,7 @@ I was helped by what [Cr33zz](https://github.com/Cr33zz) did in the [library's p
 1. Download the latest repository
 2. Open the Cudafy.sln project
 3. Choose the "Debug" solution
-4. Choose the "Any CPU" solution platforms
+4. Choose the "x64" solution platforms
 5. Choose the "CudafyByExample" startup project
 6. Rebuild whole project
 7. Start "CudafyByExample"
