@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using System;
+using System.Diagnostics;
 using System.IO;
 
 namespace Cudafy
@@ -11,40 +12,10 @@ namespace Cudafy
         /// <remarks>Throws an exception if it's not installed.</remarks>
         static string getToolkitBaseDir()
         {
-            // http://stackoverflow.com/a/13232372/126995
-            RegistryKey localKey;
-            if( Environment.Is64BitProcess || !Environment.Is64BitOperatingSystem )
-                localKey = Registry.LocalMachine;
-            else
-                localKey = RegistryKey.OpenBaseKey( RegistryHive.LocalMachine, RegistryView.Registry64 );
-
-            RegistryKey registryKey = localKey.OpenSubKey( @"SOFTWARE\NVIDIA Corporation\GPU Computing Toolkit\CUDA\v10.1", false );
-            if( null == registryKey)
-            {
-                throw new CudafyCompileException("nVidia GPU Toolkit error: version 10.1 is not installed.");
-            }
-
-            string res = null;
-            foreach (var Software in Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall").GetSubKeyNames())
-            {
-                RegistryKey Program = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\" + Software);
-                if (Program.GetValue("DisplayName") != null)
-                {
-                    string name = Convert.ToString(Program.GetValue("DisplayName"));
-                    if (name.Contains("CUDA Version") && Program.GetValue("DisplayVersion") as string == "10.1")
-                        res = Program.GetValue("InstallLocation") as string;
-                }
-            }
-
-            if (null == res)
-            {
-                res = Environment.ExpandEnvironmentVariables("%ProgramW6432%") + "\\NVIDIA GPU Computing Toolkit\\CUDA\\v10.1";
-            }
-
-            if( !Directory.Exists( res ) )
-                throw new CudafyCompileException( "nVidia GPU Toolkit error: the installation directory \"" + res + "\" doesn't exist" );
-            return res;
+            //Just for now
+            return @"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2";
         }
+
 
         static readonly string toolkitBaseDir = getToolkitBaseDir();
 
@@ -65,10 +36,8 @@ namespace Cudafy
         /// <summary>Path to the Microsoft's visual studio folder where cl.exe is localed.</summary>
         public static string getClExeDirectory()
         {
-            // C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin
-
+            //Traditional method of searching by the registry
             string[] versionsToTry = new string[] { "12.0", "11.0" };
-
             RegistryKey localKey;
             if( Environment.Is64BitProcess )
                 localKey = RegistryKey.OpenBaseKey( RegistryHive.LocalMachine, RegistryView.Registry32 );
@@ -97,8 +66,6 @@ namespace Cudafy
                     // In 64-bits processes we use a 64-bits compiler. If you'd like to always use the 32-bits one, remove this.
                     clDir = Path.Combine( clDir, "amd64" );
                 }
-
-                // C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin
                 if( !Directory.Exists( clDir ) )
                     continue;
 
@@ -106,6 +73,27 @@ namespace Cudafy
                 if( File.Exists( clPath ) )
                     return clDir;
             }
+
+            //Search using vswhere.exe
+            Process getVS = new Process
+            {
+                StartInfo = {
+                        UseShellExecute = false,
+                        RedirectStandardOutput = true,
+                        FileName = "vswhere.exe",
+                        Arguments = " -latest -property installationPath"
+                }
+            };
+            getVS.Start();
+            string vsPath = Path.GetFullPath(Path.Combine(getVS.StandardOutput.ReadLine(), @"VC\Tools\MSVC"));
+            getVS.WaitForExit();
+
+            string[] vsDirs = Directory.GetDirectories(vsPath);
+
+            if (vsDirs.Length > 0)
+                for (int i = vsDirs.Length; i > 0; i--)
+                    if (File.Exists(Path.Combine(vsDirs[i - 1], @"bin\Hostx64\x64\cl.exe")))
+                        return Path.Combine(vsDirs[i - 1], @"bin\Hostx64\x64\cl.exe");
 
             throw new CudafyCompileException( "nVidia GPU Toolkit error: cl.exe was not found" );
         }
