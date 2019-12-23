@@ -12,6 +12,10 @@ I was helped by what [Cr33zz](https://github.com/Cr33zz) did in the [library's p
 ### What's new?
 I added automatic support for versions 10.2 and 10.1.
 
+### Where can I find CUDA Toolkit?
+You can download the latest CUDA version from the official NVIDIA website
+[NVIDIA CUDA Toolkit](https://developer.nvidia.com/cuda-downloads)
+
 ## ATTENTION
 Cudafy.NET is created by [HYBRIDDSP](http://hybriddsp.com/products/cudafynet/) under LGPL v2.1 License.
 I only used sources on the Internet and searched the files to adapt them to the latest version of CUDA 10.1
