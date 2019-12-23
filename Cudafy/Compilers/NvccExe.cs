@@ -13,8 +13,7 @@ namespace Cudafy
         static string getToolkitBaseDir()
         {
             //Find Computing Toolkit in the default path
-            string prFil = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
-            prFil = Path.Combine(prFil, @"NVIDIA GPU Computing Toolkit\CUDA");
+            string prFil = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), @"NVIDIA GPU Computing Toolkit\CdUDA");
 
             if (Directory.Exists(prFil))
             {
@@ -22,6 +21,12 @@ namespace Cudafy
                 if(ctDirs.Length > 0)
                     for (int i = ctDirs.Length; i > 0; i--)
                         return Path.Combine(prFil, ctDirs[i - 1]);
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("nVidia GPU Toolkit error: Could not find 'NVIDIA GPU Computing Toolkit' in default path. Modify the Cudafy/Compilers/NvccExe.cs file to change the path.");
+                Console.ResetColor();
             }
 
             throw new CudafyCompileException("nVidia GPU Toolkit error: Computing Toolkit was not found");
