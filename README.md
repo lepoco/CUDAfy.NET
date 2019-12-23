@@ -1,16 +1,16 @@
 # CUDAfy.NET - CUDA 10.1 & Visual Studio 2019 & NET.Framework 4.8
-CUDAfy.NET access to work with Visual Studio 2019 and the latest NVIDIA Toolkit CUDA 10.1 library
+CUDAfy.NET access to work with Visual Studio 2019 and the latest NVIDIA Toolkit CUDA 10.2 library
 
 I was helped by what [Cr33zz](https://github.com/Cr33zz) did in the [library's processing at VS 2017](https://github.com/Cr33zz/CUDAfy.NET).
 
-### What works?
+### What works? (not yet)
 - [x] The library starts correctly in the .NET Framework 4.8
 - [x] The library works correctly (for my knowledge) with NVIDIA Toolkit CUDA 10.1
 - [x] The library works correctly with Visual Studio 2019 16.1.1
 - [x] Everything starts correctly only in the 64-bit version.
 
 ### What's new?
-I added automatic support for versions 10.1 and 10.
+I added automatic support for versions 10.2 and 10.1.
 
 ## ATTENTION
 Cudafy.NET is created by [HYBRIDDSP](http://hybriddsp.com/products/cudafynet/) under LGPL v2.1 License.
