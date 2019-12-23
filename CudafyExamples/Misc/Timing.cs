@@ -55,7 +55,7 @@ namespace CudafyExamples.Misc
                 }
             });
 
-            CudafyModule km = CudafyTranslator.Cudafy(eArchitecture.sm_20);
+            CudafyModule km = CudafyTranslator.Cudafy(eArchitecture.sm_60);
 
             GPGPU gpu = CudafyHost.GetDevice(CudafyModes.Target, 0);
             gpu.LoadModule(km);            

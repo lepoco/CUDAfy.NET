@@ -42,40 +42,43 @@ namespace CudafyExamples
                 CudafyModes.DeviceId = 0;
                 CudafyTranslator.Language = CudafyModes.Target == eGPUType.OpenCL ? eLanguage.OpenCL : eLanguage.Cuda;
 
-                Console.WriteLine("\r\nArrayBasicIndexing");
+                Console.WriteLine("===================================\n          CudafyExamples\n         Hybrid DSP Systems\nCopyright © Hybrid DSP Systems 2011\n===================================");
+                Console.WriteLine("\n* VS 2019 & .NET 4.8\n* optimization by RapidDev\n");
+
+                ConsoleHeader(1, "ArrayBasicIndexing");
                 ArrayBasicIndexing.Execute();
-                Console.WriteLine("\r\nArrayMultidimensions");
+                ConsoleHeader(2, "ArrayMultidimensions");
                 ArrayMultidimensions.Execute();
 
                 if (CudafyModes.Target != eGPUType.OpenCL)
                 {
-                    Console.WriteLine("\r\nClass examples");
+                    ConsoleHeader(3, "Class examples");
                     CudafyClassExamples.Execute();
-                    Console.WriteLine("\r\nSIMDFunctions");
+                    ConsoleHeader(4, "SIMDFunctions");
                     SIMDFunctions.Execute();
-                    Console.WriteLine("\r\nGlobalArrays");
+                    ConsoleHeader(5, "GlobalArrays");
                     GlobalArrays.Execute();
-                    Console.WriteLine("\r\nComplexNumbersD");
+                    ConsoleHeader(6, "ComplexNumbersD");
                     ComplexNumbersD.Execute();
-                    Console.WriteLine("\r\nComplexNumbersF");
+                    ConsoleHeader(7, "ComplexNumbersF");
                     ComplexNumbersF.Execute();               
-                    Console.WriteLine("\r\nDummyFunctions");
+                    ConsoleHeader(8, "DummyFunctions");
                     DummyFunctions.Execute();
                 
-                    Console.WriteLine("\r\nTextInsertion");
+                    ConsoleHeader(9, "TextInsertion");
                     TextInsertion.Execute();
                 
 
-                    Console.WriteLine("\r\nVoting.Ballot");
+                    ConsoleHeader(10, "Voting.Ballot");
                     Voting.Ballot.Execute();
-                    Console.WriteLine("\r\nVoting.SyncThreadCount");
+                    ConsoleHeader(11, "Voting.SyncThreadCount");
                     Voting.SyncThreadCount.Execute();
                 
-                    Console.WriteLine("\r\nFinanceTest");
+                    ConsoleHeader(12, "FinanceTest");
                     FinanceTest.Execute();
-                    Console.WriteLine("\r\nTiming");
+                    ConsoleHeader(13, "Timing");
                     Timing.Execute();
-                    Console.WriteLine("\r\nPinnedAsyncIO");
+                    ConsoleHeader(14, "PinnedAsyncIO");
                     PinnedAsyncIO.Execute();
                 }
                 Console.WriteLine("Done!");
@@ -85,6 +88,11 @@ namespace CudafyExamples
                 Console.WriteLine(ex);
             }
             Console.ReadKey();
+        }
+
+        static void ConsoleHeader(int id = -1, string name = "Unknown")
+        {
+            Console.WriteLine("\r\nRUNNING TEST\n============\n#{0} of #14\n{1}", id, name);
         }
     }
 }
