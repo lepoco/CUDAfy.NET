@@ -23,6 +23,10 @@ namespace CudafyByExample
             CudafyModes.Target = eGPUType.Cuda; // To use OpenCL, change this enum
             CudafyModes.DeviceId = 0;
             CudafyTranslator.Language = CudafyModes.Target == eGPUType.OpenCL ? eLanguage.OpenCL : eLanguage.Cuda;
+
+            Console.WriteLine("===================================\n          CudafyByExample\n        Hybrid DSP Systems\nCopyright © Hybrid DSP Systems 2011\n===================================");
+            Console.WriteLine("\n* VS 2019 & .NET 4.8\n* optimization by RapidDev\n");
+
             try
             {
                 int deviceCount = CudafyHost.GetDeviceCount(CudafyModes.Target);

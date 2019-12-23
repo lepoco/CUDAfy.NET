@@ -12,8 +12,19 @@ namespace Cudafy
         /// <remarks>Throws an exception if it's not installed.</remarks>
         static string getToolkitBaseDir()
         {
-            //Just for now
-            return @"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2";
+            //Find Computing Toolkit in the default path
+            string prFil = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
+            prFil = Path.Combine(prFil, @"NVIDIA GPU Computing Toolkit\CUDA");
+
+            if (Directory.Exists(prFil))
+            {
+                string[] ctDirs = Directory.GetDirectories(prFil);
+                if(ctDirs.Length > 0)
+                    for (int i = ctDirs.Length; i > 0; i--)
+                        return Path.Combine(prFil, ctDirs[i - 1]);
+            }
+
+            throw new CudafyCompileException("nVidia GPU Toolkit error: Computing Toolkit was not found");
         }
 
 
@@ -52,10 +63,15 @@ namespace Cudafy
 
             string[] vsDirs = Directory.GetDirectories(vsPath);
 
+            string coVer = @"bin\Hostx64\x86";
+            if (Environment.Is64BitProcess)
+                coVer = @"bin\Hostx64\x64";
+
+
             if (vsDirs.Length > 0)
                 for (int i = vsDirs.Length; i > 0; i--)
-                    if (File.Exists(Path.Combine(vsDirs[i - 1], @"bin\Hostx64\x64\cl.exe")))
-                        return Path.Combine(vsDirs[i - 1], @"bin\Hostx64\x64");
+                    if (File.Exists(Path.Combine(vsDirs[i - 1], coVer + @"\cl.exe")))
+                        return Path.Combine(vsDirs[i - 1], coVer);
 
             //Traditional method of searching by the registry
             string[] versionsToTry = new string[] { "12.0", "11.0" };
