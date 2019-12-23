@@ -3,14 +3,31 @@ CUDAfy.NET access to work with Visual Studio 2019 and the latest NVIDIA Toolkit 
 
 I was helped by what [Cr33zz](https://github.com/Cr33zz) did in the [library's processing at VS 2017](https://github.com/Cr33zz/CUDAfy.NET).
 
-### What works? (not yet)
+## How to start with CUDAfy?
+
+#### Required components
+- Visual Studio 2019
+- MSVC v142 x64 / 86 build tools (v.14.24) or higher
+- .NET Framework 4.8 SDK
+
+#### Launching
+1. Download the latest repository
+2. Open the Cudafy.sln project
+3. Choose the "Debug" solution
+4. Choose the "Any CPU" solution platforms
+5. Choose the "CudafyByExample" startup project
+6. Rebuild whole project
+7. Start "CudafyByExample"
+
+### What works?
 - [x] The library starts correctly in the .NET Framework 4.8
-- [x] The library works correctly (for my knowledge) with NVIDIA Toolkit CUDA 10.1
-- [x] The library works correctly with Visual Studio 2019 16.1.1
-- [x] Everything starts correctly only in the 64-bit version.
+- [x] The library works correctly (for my knowledge) with NVIDIA Toolkit CUDA 10.2
+- [x] The library works correctly with Visual Studio 2019 Enterprise 16.4.2
+- [x] Everything starts correctly in the 64-bit version.
 
 ### What's new?
-I added automatic support for versions 10.2 and 10.1.
+- I added automatic support for versions 10.2 and 10.1.
+- A new way to detect Visual Studio locations with the MSVC package
 
 ### Where can I find CUDA Toolkit?
 You can download the latest CUDA version from the official NVIDIA website
