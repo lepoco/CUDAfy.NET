@@ -16,7 +16,7 @@ namespace CudafyByExample
     {
         public static void Execute()
         {            
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Sample program started successfully!");
         }
     }
 }

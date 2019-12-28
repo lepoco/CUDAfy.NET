@@ -22,7 +22,7 @@ namespace CudafyByExample
             GPGPU gpu = CudafyHost.GetDevice(CudafyModes.Target, CudafyModes.DeviceId);
             gpu.LoadModule(km);
             gpu.Launch().thekernel(); // or gpu.Launch(1, 1, "kernel"); 
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Sample kernel started successfully!");
         }
 
         [Cudafy]
