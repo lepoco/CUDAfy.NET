@@ -17,7 +17,7 @@ namespace CudafyExamples.Misc
         {
             _gpu = CudafyHost.GetDevice(eGPUType.Cuda);
 
-            CudafyModule km = CudafyTranslator.Cudafy(ePlatform.Auto, _gpu.GetArchitecture(), typeof(SIMDFunctions));
+            CudafyModule km = CudafyTranslator.Cudafy(ePlatform.Auto, Program.testArchitecture, typeof(SIMDFunctions));
             //CudafyModule km = CudafyTranslator.Cudafy(ePlatform.Auto, eArchitecture.sm_12, typeof(SIMDFunctions));
             _gpu.LoadModule(km);
             int w = 1024;

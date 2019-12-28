@@ -13,7 +13,7 @@ namespace Cudafy
         static string getToolkitBaseDir()
         {
             //Find Computing Toolkit in the default path
-            string prFil = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), @"NVIDIA GPU Computing Toolkit\CdUDA");
+            string prFil = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), @"NVIDIA GPU Computing Toolkit\CUDA");
 
             if (Directory.Exists(prFil))
             {

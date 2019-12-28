@@ -8,7 +8,6 @@ using Cudafy.Translator;
 namespace CudafyExamples.Misc
 {
 
-
     public class TypeTest
     {
         // Count permutations

@@ -16,7 +16,7 @@ namespace CudafyExamples.Misc
         {           
             _gpu = CudafyHost.GetDevice(eGPUType.Cuda);
 
-            CudafyModule km = CudafyTranslator.Cudafy(ePlatform.Auto, _gpu.GetArchitecture(), typeof(TextInsertion));
+            CudafyModule km = CudafyTranslator.Cudafy(ePlatform.Auto, Program.testArchitecture, typeof(TextInsertion));
             Console.WriteLine(km.CompilerOutput);
             _gpu.LoadModule(km);
 
