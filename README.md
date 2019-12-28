@@ -26,8 +26,12 @@ I was helped by what [Cr33zz](https://github.com/Cr33zz) did in the [library's p
 - [x] Everything starts correctly in the 64-bit version.
 
 ### What's new?
-- I added automatic support for versions 10.2 and 10.1.
+- Automatic support for versions 10.2 and 10.1.
 - A new way to detect Visual Studio locations with the MSVC package
+- Corrections in the code of some test programs
+- Almost complete removal of x86 support
+- Removal of unnecessary Solutions
+- Some new errors to display
 
 ### Where can I find CUDA Toolkit?
 You can download the latest CUDA version from the official NVIDIA website

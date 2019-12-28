@@ -44,8 +44,8 @@ namespace cudafycl
         {
             if (args.Length < 1)
             {
-                Console.WriteLine("Usage: cudafycl.exe myassembly.dll [-arch=sm_11|sm_12|sm_13|sm_20|sm_21|sm_30|sm_35|sm_37|sm_50|sm_52] [-cdfy]");
-                Console.WriteLine("\t-arch: CUDA architecture. Optional. Default is sm_30.");
+                Console.WriteLine("Usage: cudafycl.exe myassembly.dll [-arch=sm_11|sm_12|sm_13|sm_20|sm_21|sm_30|sm_35|sm_37|sm_50|sm_52|sm_53|sm_60|sm_61|sm_62|sm_70|sm_72|sm_75|sm_80] [-cdfy]");
+                Console.WriteLine("\t-arch: CUDA architecture. Optional. Default is sm_50.");
                 Console.WriteLine("\t-cdfy: cudafy the assembly and create the *.cdfy output file where * is assembly name. Optional.");
                 return -1;
             }
@@ -84,7 +84,7 @@ namespace cudafycl
                         if (parts.Length > 1)
                         {                            
                             bool pass = Enum.TryParse<eArchitecture>(parts[1], out ar);
-                            return pass ? ar : eArchitecture.sm_30;
+                            return pass ? ar : eArchitecture.sm_50;
                         }
                         else
                             return ar;
