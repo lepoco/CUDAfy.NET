@@ -114,6 +114,9 @@ I only used sources on the Internet and searched the files to adapt them to the 
 
 I am not the creator of this library, but only a fan who wants to help in using CUDA in newer versions.
 
+### Original CUDAfy 1.29 repository on CodePlex Archive
+Cudafy.NET can be downloaded from [CodePlex](https://archive.codeplex.com/?p=cudafy)
+
 ### Copyright
 The LGPL v2.1 License applies to CUDAfy .NET. If you wish to modify the code then changes should be re-submitted to Hybrid DSP. If you wish to incorporate Cudafy.NET into your own application instead of redistributing the dll's then please consider a commerical license. Visit http://www.hybriddsp.com. This will also provide you with priority support and contribute to on-going development.
 
