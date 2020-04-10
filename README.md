@@ -2,8 +2,10 @@
 
 # CUDAfy.NET<br/>CUDA 10.2 & Visual Studio 2019 & NET.Framework 4.8
 CUDAfy.NET access to work with Visual Studio 2019 and the latest NVIDIA Toolkit CUDA 10.2 library
-
 I was helped by what [Cr33zz](https://github.com/Cr33zz) did in the [library's processing at VS 2017](https://github.com/Cr33zz/CUDAfy.NET).
+
+## What is CUDAfy?
+CUDAfy .NET allows easy development of high performance GPGPU applications completely from the Microsoft .NET framework. It's developed in C#.
 
 ## How to start with CUDAfy?
 
