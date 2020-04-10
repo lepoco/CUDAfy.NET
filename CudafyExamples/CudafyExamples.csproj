@@ -65,6 +65,9 @@
     <PlatformTarget>x86</PlatformTarget>
     <OutputPath>bin\x86\Releasex86\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cudafynet.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -94,6 +97,8 @@
     <Compile Include="Voting\SyncThreadCount.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="cudafynet.ico" />
+    <Content Include="cudafynet_3Nf_icon.ico" />
     <Content Include="DummyComplexFloat.cu">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

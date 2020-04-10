@@ -64,6 +64,9 @@
     <PlatformTarget>x86</PlatformTarget>
     <OutputPath>bin\x86\Releasex86\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cudafynet.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -169,6 +172,9 @@
       <Project>{16a11768-583a-47db-a9a3-c7e4173073a5}</Project>
       <Name>Cudafy</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cudafynet.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

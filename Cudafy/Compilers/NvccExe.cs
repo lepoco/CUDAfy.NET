@@ -8,6 +8,9 @@ namespace Cudafy
     /// <summary>This utility class resolves path to nVidia's nvcc.exe and Microsoft's cl.exe.</summary>
     internal static class NvccExe
     {
+        private static readonly string toolkitBaseDir = getToolkitBaseDir();
+        const string csNVCC = "nvcc.exe";
+
         /// <summary>Get GPU Computing Toolkit 7.0 installation path.</summary>
         /// <remarks>Throws an exception if it's not installed.</remarks>
         static string getToolkitBaseDir()
@@ -32,11 +35,6 @@ namespace Cudafy
             throw new CudafyCompileException("nVidia GPU Toolkit error: Computing Toolkit was not found");
         }
 
-
-        static readonly string toolkitBaseDir = getToolkitBaseDir();
-
-        const string csNVCC = "nvcc.exe";
-
         /// <summary>Path to the nVidia's toolkit bin folder where nvcc.exe is located.</summary>
         public static string getCompilerPath()
         {
@@ -52,13 +50,23 @@ namespace Cudafy
         /// <summary>Path to the Microsoft's visual studio folder where cl.exe is localed.</summary>
         public static string getClExeDirectory()
         {
+            string vswhere = "C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\vswhedre.exe";
+            string vswhere86 = "C:\\Program Files\\Microsoft Visual Studio\\Installer\\vswhere.exe";
+            if (!File.Exists(vswhere))
+            {
+                if (!File.Exists(vswhere86))
+                    throw new CudafyCompileException("NvccExe.cs Compiler Error\nUnable to locate Visual Studio installation directory");
+                else
+                    vswhere = vswhere86;
+            }
+
             //Search using vswhere.exe
             Process getVS = new Process
             {
                 StartInfo = {
                         UseShellExecute = false,
                         RedirectStandardOutput = true,
-                        FileName = "vswhere.exe",
+                        FileName = vswhere,
                         Arguments = " -latest -property installationPath"
                 }
             };
@@ -71,7 +79,6 @@ namespace Cudafy
             string coVer = @"bin\Hostx64\x86";
             if (Environment.Is64BitProcess)
                 coVer = @"bin\Hostx64\x64";
-
 
             if (vsDirs.Length > 0)
                 for (int i = vsDirs.Length; i > 0; i--)

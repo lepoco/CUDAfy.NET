@@ -33,7 +33,7 @@
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>CUDAfy2.ico</ApplicationIcon>
+    <ApplicationIcon>cudafynet.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'LinuxDebug|x64' ">
     <DebugSymbols>true</DebugSymbols>
@@ -70,6 +70,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Releasex86|x86'">
     <PlatformTarget>x86</PlatformTarget>
     <OutputPath>bin\x86\Releasex86\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CudafyModuleViewer.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
@@ -137,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CUDAfy2.ico" />
+    <Content Include="cudafynet.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\3p\cuda.net3.0.0_win\src\CUDA.NET_3.0_Source\CUDA.NET.csproj">

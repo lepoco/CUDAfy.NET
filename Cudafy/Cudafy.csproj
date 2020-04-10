@@ -80,6 +80,9 @@
     <PlatformTarget>x86</PlatformTarget>
     <OutputPath>bin\x86\Releasex86\</OutputPath>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cudafynet.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -131,10 +134,13 @@
   <ItemGroup>
     <Folder Include="Types\Vectors\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="cudafynet.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties Reactor_Output="" Reactor_Configuration="" Reactor_Project="" Reactor_Commands="" Reactor_Enabled="1" />
+      <UserProperties Reactor_Enabled="1" Reactor_Commands="" Reactor_Project="" Reactor_Configuration="" Reactor_Output="" />
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
