@@ -21,7 +21,7 @@ namespace CudafyByExample
             GPGPU gpu = CudafyHost.GetDevice(CudafyModes.Target, CudafyModes.DeviceId);
             gpu.LoadModule(km);
 
-            int c;
+            int c = 0;
             int[] dev_c = gpu.Allocate<int>(); // cudaMalloc one Int32
             gpu.Launch().add(2, 7, dev_c); // or gpu.Launch(1, 1, "add", 2, 7, dev_c);
             gpu.CopyFromDevice(dev_c, out c);
