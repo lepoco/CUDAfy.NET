@@ -50,7 +50,7 @@ namespace Cudafy
         /// <summary>Path to the Microsoft's visual studio folder where cl.exe is localed.</summary>
         public static string getClExeDirectory()
         {
-            string vswhere = "C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\vswhedre.exe";
+            string vswhere = "C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\vswhere.exe";
             string vswhere86 = "C:\\Program Files\\Microsoft Visual Studio\\Installer\\vswhere.exe";
             if (!File.Exists(vswhere))
             {
