@@ -11,6 +11,7 @@ Modern graphics cards provide the potential of massive speed increase over CPUs 
 ## How to start with CUDAfy?
 
 #### Required components
+- x64 Windows or Linux
 - Visual Studio 2019
 - MSVC v142 x64 / 86 build tools (v.14.24) or higher
 - .NET Framework 4.8 SDK
