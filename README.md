@@ -1,3 +1,5 @@
+![Logo](https://github.com/rapiddev/CUDAfy.NET/blob/master/assets/cudafynet-banner.png?raw=true)
+
 # CUDAfy.NET - CUDA 10.2 & Visual Studio 2019 & NET.Framework 4.8
 CUDAfy.NET access to work with Visual Studio 2019 and the latest NVIDIA Toolkit CUDA 10.2 library
 
@@ -36,6 +38,8 @@ I was helped by what [Cr33zz](https://github.com/Cr33zz) did in the [library's p
 ### Where can I find CUDA Toolkit?
 You can download the latest CUDA version from the official NVIDIA website
 [NVIDIA CUDA Toolkit](https://developer.nvidia.com/cuda-downloads)
+
+![Example program](https://github.com/rapiddev/CUDAfy.NET/blob/master/assets/cudafynet-example.png?raw=true)
 
 ### Example program
 Here is an example program you can run using compiled libraries.
