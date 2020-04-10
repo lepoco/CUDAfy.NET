@@ -39,7 +39,7 @@ I was helped by what [Cr33zz](https://github.com/Cr33zz) did in the [library's p
 You can download the latest CUDA version from the official NVIDIA website
 [NVIDIA CUDA Toolkit](https://developer.nvidia.com/cuda-downloads)
 
-![Example program](https://github.com/rapiddev/CUDAfy.NET/blob/master/assets/cudafynet-example.png?raw=true)
+![Example program](https://github.com/rapiddev/CUDAfy.NET/blob/master/assets/cudafy-example.png?raw=true)
 
 ### Example program
 Here is an example program you can run using compiled libraries.
