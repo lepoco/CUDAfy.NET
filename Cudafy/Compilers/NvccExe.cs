@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 
 namespace Cudafy
 {
@@ -16,14 +17,21 @@ namespace Cudafy
         static string getToolkitBaseDir()
         {
             //Find Computing Toolkit in the default path
-            string prFil = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), @"NVIDIA GPU Computing Toolkit\CUDA");
+            var prFil = new DirectoryInfo(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), @"NVIDIA GPU Computing Toolkit\CUDA"));
+            string[] supportedVersions = new string[] { "v10.1", "v10.2" };
 
-            if (Directory.Exists(prFil))
+            if (prFil.Exists)
             {
-                string[] ctDirs = Directory.GetDirectories(prFil);
-                if(ctDirs.Length > 0)
-                    for (int i = ctDirs.Length; i > 0; i--)
-                        return Path.Combine(prFil, ctDirs[i - 1]);
+                var ctDirs = prFil.GetDirectories();
+                if (ctDirs.Length > 0)
+                {
+                    for (int i = ctDirs.Length - 1; i >= 0; i--)
+                    {
+                        if (supportedVersions.Contains(ctDirs[i].Name))
+                            return ctDirs[i].FullName;
+                    }
+                    throw new CudafyCompileException("None of the installed nVidia GPU Computing Toolkit versions is supported");
+                }
             }
             else
             {
