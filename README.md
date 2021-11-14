@@ -1,20 +1,22 @@
 ![Logo](https://github.com/rapiddev/CUDAfy.NET/blob/master/assets/cudafynet-banner.png?raw=true)
 
-# CUDAfy.NET<br/>CUDA 10.2 & Visual Studio 2019 & NET.Framework 4.8
-CUDAfy.NET access to work with Visual Studio 2019 and the latest NVIDIA Toolkit CUDA 10.2 library<br/>
-I was helped by what [Cr33zz](https://github.com/Cr33zz) did in the [library's processing at VS 2017](https://github.com/Cr33zz/CUDAfy.NET).
+# CUDAfy.NET  
+CUDA 11 & Visual Studio 2022  
+CUDAfy.NET access to work with Visual Studio 2022 and the latest NVIDIA Toolkit CUDA 11 library.  
+
+This repository uses the source code created by **Hybrid DSP** to create a derivative work under the LGPL license.
 
 ## What is CUDAfy?
-CUDAfy .NET allows easy development of high performance GPGPU applications completely from the Microsoft .NET framework. It's developed in C#.<br/>
+CUDAfy .NET allows easy development of high performance GPGPU applications completely from the .NET. It's developed in C#.  
 Modern graphics cards provide the potential of massive speed increase over CPUs for non-graphics related intensive numeric operations. Many large data set operations such as matrices can see a 100x or more speed up. CUDAfy allows .NET developers to easily create complex applications that split processing cleanly between host and GPU. There are no separate CUDA cu files or complex set-up procedures to launch GPU device functions. It follows the CUDA programming model and any knowledge gained from tutorials or books on CUDA can be easily transferred to CUDAfy, only in a clean .NET fashion.
 
 ## How to start with CUDAfy?
 
 #### Required components
 - x64 Windows or Linux
-- Visual Studio 2019
+- Visual Studio 2022
 - MSVC v142 x64 / 86 build tools (v.14.24) or higher
-- .NET Framework 4.8 SDK
+- .NET Framework 4.8 | .NET 6
 
 #### Launching
 1. Download the latest repository
@@ -25,19 +27,13 @@ Modern graphics cards provide the potential of massive speed increase over CPUs 
 6. Rebuild whole project
 7. Start "CudafyByExample"
 
-### What works?
-- [x] The library starts correctly in the .NET Framework 4.8
-- [x] The library works correctly (for my knowledge) with NVIDIA Toolkit CUDA 10.2
-- [x] The library works correctly with Visual Studio 2019 Enterprise 16.5.3
-- [x] Everything starts correctly in the 64-bit version.
-
 ### What's new?
-- Automatic support for versions 10.2 and 10.1.
-- A new way to detect Visual Studio locations with the MSVC package
-- Corrections in the code of some test programs
-- Almost complete removal of x86 support
-- Removal of unnecessary Solutions
-- Some new errors to display
+- Automatic support for versions 10.2, 10.1 and 11.
+- A new way to detect Visual Studio locations with the MSVC package.
+- Corrections in the code of some test programs.
+- Almost complete removal of x86 support.
+- Removal of unnecessary Solutions.
+- Some new errors to display.
 
 ### Where can I find CUDA Toolkit?
 You can download the latest CUDA version from the official NVIDIA website
@@ -116,19 +112,12 @@ class Program
 }
 ```
 
-## ATTENTION
-Cudafy.NET is created by [HYBRIDDSP](http://hybriddsp.com/products/cudafynet/) under LGPL v2.1 License.
-I only used sources on the Internet and searched the files to adapt them to the latest version of CUDA 10.2 and .NET Framework 4.8
+### License
+Cudafy.NET was created by [Hybrid DSP](http://hybriddsp.com/products/cudafynet/) under LGPL v2.1 License.  
 
-I am not the creator of this library, but only a fan who wants to help in using CUDA in newer versions.
-
-### Original CUDAfy 1.29 repository on CodePlex Archive
-Cudafy.NET can be downloaded from [CodePlex](https://archive.codeplex.com/?p=cudafy)
-
-### Copyright
 The LGPL v2.1 License applies to CUDAfy .NET. If you wish to modify the code then changes should be re-submitted to Hybrid DSP. If you wish to incorporate Cudafy.NET into your own application instead of redistributing the dll's then please consider a commerical license. Visit http://www.hybriddsp.com. This will also provide you with priority support and contribute to on-going development.
 
-The following libraries are made use of:
-The MIT license applies to ILSpy, NRefactory and ICSharpCode.Decompiler (Copyright (c) 2011 AlphaSierraPapa for the SharpDevelop team).
-Mono.Cecil also uses the MIT license (Copyright JB Evain).
+The following libraries are made use of:  
+The MIT license applies to ILSpy, NRefactory and ICSharpCode.Decompiler (Copyright (c) 2011 AlphaSierraPapa for the SharpDevelop team).  
+Mono.Cecil also uses the MIT license (Copyright JB Evain).  
 CUDA.NET is a free for use license (Copyright Company for Advanced Supercomputing Solutions Ltd)
