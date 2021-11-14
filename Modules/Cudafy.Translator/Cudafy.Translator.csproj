@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <TargetFrameworks>net48;net5.0;net6.0</TargetFrameworks>
+    <TargetFrameworks>net48;net5.0-windows;net6.0-windows</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <PlatformTarget>x64</PlatformTarget>
     <Platforms>x64</Platforms>
@@ -12,6 +12,7 @@
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Deterministic>true</Deterministic>
+    <UseWpf>true</UseWpf>
     <PackageVersion>$(Version)</PackageVersion>
   </PropertyGroup>
 
@@ -27,13 +28,18 @@
     <Copyright>Copyright (c) 2011 Hybrid DSP Systems | 2021 CUDAfy.NET Contributors</Copyright>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
-    <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\simd_functions_opencl.h" />
+    <EmbeddedResource Include="Resources\simd_functions.h" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\External\Cloo\Cloo.csproj" />
-    <ProjectReference Include="..\External\CUDA.NET\CUDA.NET.csproj" />
+    <PackageReference Include="ICSharpCode.Decompiler" Version="2.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cudafy\Cudafy.csproj" />
+    <ProjectReference Include="..\Cudafy.Host\Cudafy.Host.csproj" />
   </ItemGroup>
 
 </Project>

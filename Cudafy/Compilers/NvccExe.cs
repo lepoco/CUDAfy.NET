@@ -17,10 +17,8 @@ namespace Cudafy
         static string getToolkitBaseDir()
         {
             //Find Computing Toolkit in the default path
-            var prFil = new DirectoryInfo(Path.Combine(
-                Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles),
-                @"NVIDIA GPU Computing Toolkit\CUDA"));
-            string[] supportedVersions = new string[] { "v10.1", "v10.2", "v11.0", "v11.5" };
+            var prFil = new DirectoryInfo(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), @"NVIDIA GPU Computing Toolkit\CUDA"));
+            string[] supportedVersions = new string[] { "v10.1", "v10.2" };
 
             if (prFil.Exists)
             {
@@ -32,16 +30,13 @@ namespace Cudafy
                         if (supportedVersions.Contains(ctDirs[i].Name))
                             return ctDirs[i].FullName;
                     }
-
-                    throw new CudafyCompileException(
-                        "None of the installed nVidia GPU Computing Toolkit versions is supported");
+                    throw new CudafyCompileException("None of the installed nVidia GPU Computing Toolkit versions is supported");
                 }
             }
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(
-                    "nVidia GPU Toolkit error: Could not find 'NVIDIA GPU Computing Toolkit' in default path. Modify the Cudafy/Compilers/NvccExe.cs file to change the path.");
+                Console.WriteLine("nVidia GPU Toolkit error: Could not find 'NVIDIA GPU Computing Toolkit' in default path. Modify the Cudafy/Compilers/NvccExe.cs file to change the path.");
                 Console.ResetColor();
             }
 
@@ -65,12 +60,10 @@ namespace Cudafy
         {
             string vswhere = "C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\vswhere.exe";
             string vswhere86 = "C:\\Program Files\\Microsoft Visual Studio\\Installer\\vswhere.exe";
-
             if (!File.Exists(vswhere))
             {
                 if (!File.Exists(vswhere86))
-                    throw new CudafyCompileException(
-                        "NvccExe.cs Compiler Error\nUnable to locate Visual Studio installation directory");
+                    throw new CudafyCompileException("NvccExe.cs Compiler Error\nUnable to locate Visual Studio installation directory");
                 else
                     vswhere = vswhere86;
             }
@@ -78,12 +71,11 @@ namespace Cudafy
             //Search using vswhere.exe
             Process getVS = new Process
             {
-                StartInfo =
-                {
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
-                    FileName = vswhere,
-                    Arguments = " -latest -property installationPath"
+                StartInfo = {
+                        UseShellExecute = false,
+                        RedirectStandardOutput = true,
+                        FileName = vswhere,
+                        Arguments = " -latest -property installationPath"
                 }
             };
             getVS.Start();
@@ -103,7 +95,6 @@ namespace Cudafy
 
             //Traditional method of searching by the registry
             string[] versionsToTry = new string[] { "12.0", "11.0" };
-
             RegistryKey localKey;
             if (Environment.Is64BitProcess)
                 localKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32);
@@ -132,7 +123,6 @@ namespace Cudafy
                     // In 64-bits processes we use a 64-bits compiler. If you'd like to always use the 32-bits one, remove this.
                     clDir = Path.Combine(clDir, "amd64");
                 }
-
                 if (!Directory.Exists(clDir))
                     continue;
 

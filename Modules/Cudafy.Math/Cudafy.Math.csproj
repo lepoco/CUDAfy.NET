@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <TargetFrameworks>net48;net5.0;net6.0</TargetFrameworks>
+    <TargetFrameworks>net48;net5.0-windows;net6.0-windows</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <PlatformTarget>x64</PlatformTarget>
     <Platforms>x64</Platforms>
@@ -27,13 +27,16 @@
     <Copyright>Copyright (c) 2011 Hybrid DSP Systems | 2021 CUDAfy.NET Contributors</Copyright>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
-    <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
+  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0-windows'">
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0-windows'">
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\External\Cloo\Cloo.csproj" />
-    <ProjectReference Include="..\External\CUDA.NET\CUDA.NET.csproj" />
+    <ProjectReference Include="..\..\Cudafy\Cudafy.csproj" />
+    <ProjectReference Include="..\Cudafy.Host\Cudafy.Host.csproj" />
+    <ProjectReference Include="..\Cudafy.Translator\Cudafy.Translator.csproj" />
   </ItemGroup>
 
 </Project>

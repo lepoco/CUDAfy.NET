@@ -12,11 +12,11 @@
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Deterministic>true</Deterministic>
-    <PackageVersion>$(Version)</PackageVersion>
+    <PackageVersion>4.0.0</PackageVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
   <PropertyGroup>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageProjectUrl>https://github.com/lepoco/CUDAfy.NET</PackageProjectUrl>
     <RepositoryUrl>https://github.com/lepoco/CUDAfy.NET</RepositoryUrl>
@@ -24,16 +24,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <Copyright>Copyright (c) 2011 Hybrid DSP Systems | 2021 CUDAfy.NET Contributors</Copyright>
+    <Copyright>Copyright (c) 2008 Advanced Supercomputing Solutions Ltd | 2011 Hybrid DSP Systems | 2021 CUDAfy.NET Contributors</Copyright>
   </PropertyGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
-    <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\External\Cloo\Cloo.csproj" />
-    <ProjectReference Include="..\External\CUDA.NET\CUDA.NET.csproj" />
-  </ItemGroup>
 
 </Project>

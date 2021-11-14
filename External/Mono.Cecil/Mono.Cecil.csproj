@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworks>net48;net5.0;net6.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <Platforms>x64</Platforms>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Deterministic>true</Deterministic>
+    <PackageVersion>1.0.0</PackageVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageProjectUrl>https://github.com/jbevain/cecil</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jbevain/cecil</RepositoryUrl>
+    <PackageLicense>https://github.com/jbevain/cecil/blob/master/LICENSE.txt</PackageLicense>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Copyright>Copyright (c) 2008 - 2011 Jb Evain</Copyright>
+  </PropertyGroup>
+
+</Project>

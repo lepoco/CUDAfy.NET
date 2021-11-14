@@ -23,9 +23,9 @@ Modern graphics cards provide the potential of massive speed increase over CPUs 
 2. Open the Cudafy.sln project
 3. Choose the "Debug" solution
 4. Choose the "x64" solution platforms
-5. Choose the "CudafyByExample" startup project
+5. Choose the "Cudafy.Demo" startup project
 6. Rebuild whole project
-7. Start "CudafyByExample"
+7. Start "Cudafy.Demo"
 
 ### What's new?
 - Automatic support for versions 10.2, 10.1 and 11.
