@@ -1,6 +1,16 @@
 ![Logo](https://github.com/lepoco/CUDAfy.NET/blob/master/.github/assets/cudafynet-banner.png?raw=true)
 
-# CUDAfy.NET  
+
+# The problem
+<hr />
+<hr />
+The Cudafy.Translator library must be rewritten, hence the question arises whether it makes sense to continue the work of the Hybrid DSP, or to rewrite everything from scratch with the MIT license.  
+
+If anyone is willing to cooperate, please contact me. Currently, everything is basically rewritten to .NET 6. The Cudafy.Translator library fails to compile due to problems with Decompiler, NRefactory and ILSpy.
+<hr />
+<hr />
+
+## CUDAfy.NET  
 CUDA 11 & Visual Studio 2022  
 CUDAfy.NET access to work with Visual Studio 2022 and the latest NVIDIA Toolkit CUDA 11 library.  
 
