@@ -8,7 +8,9 @@ The Cudafy.Translator library must be rewritten, hence the question arises wheth
 
 If anyone is willing to cooperate, please contact me. Currently, everything is basically rewritten to .NET 6. The Cudafy.Translator library fails to compile due to problems with Decompiler, NRefactory and ILSpy.  
 
-[If you want, you can download the last successful compilation of the library here.](https://github.com/lepoco/CUDAfy.NET/releases/tag/v.1.0.0)
+[If you want, you can download the last successful compilation of the library here.](https://github.com/lepoco/CUDAfy.NET/releases/tag/v.1.0.0)  
+[Source code of the library, before .NET6 refactor, can be downloaded here](https://github.com/lepoco/CUDAfy.NET/archive/refs/tags/v.1.0.0.zip)  
+[The original repository is no longer available for download. CodePlex has been shutted down](https://devblogs.microsoft.com/bharry/shutting-down-codeplex/)
 <hr />
 <hr />
 
