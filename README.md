@@ -1,4 +1,4 @@
-![Logo](https://github.com/rapiddev/CUDAfy.NET/blob/master/assets/cudafynet-banner.png?raw=true)
+![Logo](https://github.com/lepoco/CUDAfy.NET/blob/master/.github/assets/cudafynet-banner.png?raw=true)
 
 # CUDAfy.NET  
 CUDA 11 & Visual Studio 2022  
@@ -39,7 +39,7 @@ Modern graphics cards provide the potential of massive speed increase over CPUs 
 You can download the latest CUDA version from the official NVIDIA website
 [NVIDIA CUDA Toolkit](https://developer.nvidia.com/cuda-downloads)
 
-![Example program](https://github.com/rapiddev/CUDAfy.NET/blob/master/assets/cudafy-example.png?raw=true)
+![Example program](https://github.com/lepoco/CUDAfy.NET/blob/master/.github/assets/cudafy-example.png?raw=true)
 
 ### Example program
 Here is an example program you can run using compiled libraries.
