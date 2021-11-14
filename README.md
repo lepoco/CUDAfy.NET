@@ -6,7 +6,9 @@
 <hr />
 The Cudafy.Translator library must be rewritten, hence the question arises whether it makes sense to continue the work of the Hybrid DSP, or to rewrite everything from scratch with the MIT license.  
 
-If anyone is willing to cooperate, please contact me. Currently, everything is basically rewritten to .NET 6. The Cudafy.Translator library fails to compile due to problems with Decompiler, NRefactory and ILSpy.
+If anyone is willing to cooperate, please contact me. Currently, everything is basically rewritten to .NET 6. The Cudafy.Translator library fails to compile due to problems with Decompiler, NRefactory and ILSpy.  
+
+[If you want, you can download the last successful compilation of the library here.](https://github.com/lepoco/CUDAfy.NET/releases/tag/v.1.0.0)
 <hr />
 <hr />
 
